@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Gun from "../Gun/Gun";
 
-const Guns = () => {
+const Guns = ({increase}) => {
   const [guns, setGuns] = useState([]);
   useEffect(() => {
     fetch("https://raw.githubusercontent.com/mir-hussain/guns/main/data.json")
@@ -22,7 +22,7 @@ const Guns = () => {
       </div>
       <div className="grid grid-cols-3 gap-20">
       {guns.map((gun) => (
-          <Gun gun={gun} key ={gun.id} />
+          <Gun gun={gun} key ={gun.id} increase={increase} />
         ))}
       </div>
     </div>
