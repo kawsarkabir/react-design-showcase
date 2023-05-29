@@ -6,7 +6,7 @@ const Header = () => {
     <nav className="Header">
       <img src={logo} alt="logo" />
       <div className="ul-list">
-        <a href="#">Order</a>
+        <a href="#">Shop</a>
         <a href="#">Order Review</a>
         <a href="#">Manage Inventory</a>
         <a href="#">Login</a>
