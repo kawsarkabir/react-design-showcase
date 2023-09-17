@@ -1,4 +1,4 @@
-## KAWSAR KABIR - 50+ React Project For Beginner 
+## KAWSAR KABIR -React Project For Beginner 
 
 In this repository, you will find source codes, explanations, live demo and other resources for 50+ project with react for beginner.If You are a Begineer in ReactJs, Then You Sure Follow in This Repo.
 
