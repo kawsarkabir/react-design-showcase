@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <!-- tailwindcss cdn link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header class="container mx-auto px-10 mt-5">
+      <div
+        class="flex justify-between items-center flex-col gap-4 md:flex-row lg:flex-row"
+      >
+        <img src="./assest/Logo.png" alt="" class="w-36" />
+        <button
+          id="sort-by-view"
+          class="bg-gray-100 py-2 px-6 rounded-lg focus:bg-red-500 focus:text-white"
+        >
+          Sort By View
+        </button>
+        <button class="py-2 px-6 rounded-lg bg-red-500 text-white uppercase">
+          Blog
+        </button>
+      </div>
+      <p class="border-b mt-5"></p>
+    </header>
+    <main>
+      <section class="container mx-auto p-5">
+        <h1 class="my-8 text-4xl text-center">Recent Blog</h1>
+        <div
+          class="grid grid-cols-1 lg:grid-cols-2 justify-center justify-items-center gap-10"
+        >
+          <div class="card card-compact">
+            <figure class="rounded-none">
+              <img
+                class="filter brightness-50"
+                src="./assest/unseen-studio-s9CC2SKySJM-unsplash.jpg"
+                alt="Shoes"
+              />
+            </figure>
+            <div class="relative md:bottom-24 bottom-28 lg:bottom-24 left-3">
+              <button class="px-6 mb-1 border-none bg-yellow-300 text-white">
+                Es6
+              </button>
+              <span class="ml-3 text-white">Sep 1 2023</span>
+              <h2 class="card-title text-white text-2xl lg:text-4xl">
+                Discuss the scope of var, let, and const
+              </h2>
+            </div>
+            <div>
+              <p class="text-lg relative bottom-14 text-justify">
+                var declarations are globally scoped or function scoped while
+                let and const are block scoped. var variables can be updated and
+                re-declared within its scope; let variables can be updated but
+                not re-declared; const variables can neither be updated nor
+                re-declared. They are all hoisted to the top of their scope.
+              </p>
+            </div>
+          </div>
+          <div class="card card-compact">
+            <figure class="rounded-none">
+              <img
+                class="filter brightness-50"
+                src="./assest/clement-helardot-95YRwf6CNw8-unsplash.jpg"
+                alt="Shoes"
+              />
+            </figure>
+            <div class="relative md:bottom-24 bottom-28 lg:bottom-24 left-1">
+              <button class="px-6 mb-1 border-none bg-yellow-300 text-white">
+                Es6
+              </button>
+              <span class="ml-3 text-white">Sep 1 2023</span>
+              <h2 class="card-title text-white text-2xl lg:text-4xl">
+                Tell us the use cases of null and undefined
+              </h2>
+            </div>
+            <div>
+              <p class="text-lg relative bottom-14 text-justify">
+                Undefined means the variable has been declared, but its value
+                has not been assigned. Null means an empty value or a blank
+                value. The typeof() operator returns undefined for an undefined
+                variable. The typeof() operator returns the type as an object
+                for a variable whose value is assigned as null.
+              </p>
+            </div>
+          </div>
+          <div class="card card-compact">
+            <figure class="rounded-none">
+              <img
+                src="./assest/jefferson-santos-9SoCnyQmkzI-unsplash.jpg"
+                alt="Shoes"
+              />
+            </figure>
+            <div class="relative md:bottom-24 bottom-28 lg:bottom-24 left-3">
+              <button class="px-6 mb-1 border-none bg-yellow-300 text-white">
+                Es6
+              </button>
+              <span class="ml-3 text-white">Sep 1 2023</span>
+              <h2 class="card-title text-white text-2xl lg:text-4xl">
+                What do you mean by REST API?
+              </h2>
+            </div>
+            <div>
+              <p class="text-lg relative bottom-14 text-justify">
+                What is a REST API? An API, or application programming
+                interface, is a set of rules that define how applications or
+                devices can connect to and communicate with each other. A REST
+                API is an API that conforms to the design principles of the
+                REST, or representational state transfer architectural style.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
