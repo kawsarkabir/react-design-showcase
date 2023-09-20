@@ -1,0 +1,74 @@
+[
+  {
+    "id":1,
+    "img": "https://i.ibb.co/zVqSTHX/Rectangle-2-2.png",
+    "course_name": "Introduction to C Programming",
+    "price": 29.99,
+    "credit": 2,
+    "details": "Learn the basics of programming with this beginner-friendly course. No prior experience required."
+  },
+  {
+    "id":2,
+    "img": "https://i.ibb.co/bL8dvw4/Rectangle-2-3.png",
+    "course_name": "Introduction to Algorithms",
+    "price": 59.99,
+    "credit": 4,
+    "details": "Take your web development skills to the next level with this advanced course."
+  },
+  {
+    "id":3,
+    "img": "https://i.ibb.co/989Xq59/Rectangle-2-4.png",
+    "course_name": "Introduction to C++ for DSA",
+    "price": 39.99,
+    "credit": 3,
+    "details": "Learn the basics of data analysis and gain valuable skills for your career."
+  },
+  {
+    "id":4,
+    "img": "https://i.ibb.co/RPR6C40/Rectangle-3.png",
+    "course_name": "Basic Data Structures",
+    "price": 49.99,
+    "credit": 3,
+    "details": "Explore the exciting field of artificial intelligence and machine learning in this introductory course."
+  },
+  {
+    "id":5,
+    "img": "https://i.ibb.co/rFP8Fd3/Rectangle-2.png",
+    "course_name": "Introduction to OOP Python",
+    "price": 44.99,
+    "credit": 2,
+    "details": "Master the art of digital marketing and grow your business or career."
+  },
+  {
+    "id":6,
+    "img": "https://i.ibb.co/nDsP4Sf/Rectangle-2-5.png",
+    "course_name": "Software Engineering",
+    "price": 34.99,
+    "credit": 2,
+    "details": "Get a solid foundation in finance principles with this introductory course."
+  },
+  {
+    "id":7,
+    "img": "https://i.ibb.co/k8qkXzM/Rectangle-3-1.png",
+    "course_name": "AWS, Cloud Computing",
+    "price": 49.99,
+    "credit": 3,
+    "details": "Unlock your creative potential with this hands-on graphic design workshop."
+  },
+  {
+    "id":8,
+    "img": "https://i.ibb.co/WkVD5QT/Rectangle-2-1.png",
+    "course_name": "Database (MySQL)",
+    "price": 54.99,
+    "credit": 3,
+    "details": "Develop essential leadership skills for success in the business world."
+  },
+  {
+    "id":9,
+    "img": "https://i.ibb.co/1mJ9GDt/Rectangle-2-6.png",
+    "course_name": "Problem-Solving Part",
+    "price": 39.99,
+    "credit": 2,
+    "details": "Learn the fundamentals of photography and capture stunning images."
+  }
+]
