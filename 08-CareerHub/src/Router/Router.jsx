@@ -4,6 +4,7 @@ import Layout from '../Layout/Layout';
 import Statistics from '../Pages/Statistics/Statistics';
 import AppliedJob from '../Pages/AppliedJob/AppliedJob';
 import Blogs from '../Pages/Blogs/Blogs';
+import DetailsJob from '../components/FeaturesList/DetailsJob';
 
 const Router =  createBrowserRouter([
     {
@@ -21,6 +22,10 @@ const Router =  createBrowserRouter([
             {
                 path: '/blogs', 
                 element: <Blogs/>
+            },
+            {
+                path: '/job/:id',
+                element: <DetailsJob/>
             }
         ]
     }
