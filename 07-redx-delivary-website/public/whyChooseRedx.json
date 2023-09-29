@@ -1,0 +1,38 @@
+[
+    {
+      "id": "1",
+      "title": "৩ দিনে ডেলিভারি গ্যারান্টিড",
+      "image": "https://i.ibb.co/92s1hJP/fastest-delivery.png",
+      "description": "মাত্র ৩ দিনে বাংলাদেশের যেকোনো প্রান্তে পার্সেল ডেলিভারির নিশ্চয়তা"
+    },
+    {
+      "id": "2",
+      "title": "ডোরস্টেপ পিকআপ ও ডেলিভারি",
+      "image": "https://i.ibb.co/yVWFnzQ/doorstep-pickup-delivery.png",
+      "description": "আপনার দরজা থেকে কাঙ্ক্ষিত গন্তব্যে পার্সেল পৌঁছে যাবে নির্বিঘ্নে"
+    },
+    {
+      "id": "3",
+      "title": "এসএমএস আপডেট",
+      "image": "https://i.ibb.co/wptmSJn/sms-update.png",
+      "description": "পার্সেল বুকিং এবং ডেলিভারির সময় পাবেন আপনার নিবন্ধিত মোবাইল নম্বরে এসএমএস আপডেট"
+    },
+    {
+      "id": "4",
+      "title": "পরের দিনই পেমেন্ট",
+      "image": "https://i.ibb.co/tK8vkLL/next-day-payment.png",
+      "description": "ডেলিভারি সম্পূর্ণ হলে পরের দিনই পেমেন্ট পেয়ে যাবেন"
+    },
+    {
+      "id": "5",
+      "title": "সেরা ক্যাশ অন ডেলিভারি রেট",
+      "image": "https://i.ibb.co/GHXbsJN/best-cod-rates.png",
+      "description": "ঢাকার ভিতর ক্যাশ অন ডেলিভারি চার্জ ০%, ঢাকার বাইরে ১%"
+    },
+    {
+      "id": "6",
+      "title": "সিকিউর হ্যান্ডলিং",
+      "image": "https://i.ibb.co/ZfdMRtG/secure-handling.png",
+      "description": "সর্বোচ্চ নিরাপদে শিপমেন্টের নিশ্চয়তা ও ক্ষতিপূরণ সুবিধা"
+    }
+  ]

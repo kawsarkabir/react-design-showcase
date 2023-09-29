@@ -1,0 +1,50 @@
+[
+    {
+      "id": "1",
+      "title": "পার্সেল ডেলিভারি",
+      "image": "https://i.ibb.co/wLxPWJY/parcel-delivery.webp",
+      "description": "ব্যক্তিগত, ছোট ব্যবসা এবং কর্পোরেটদের জন্য ফার্স্ট-মাইল পিকআপ এবং লাস্ট মাইল ডেলিভারি সেবা"
+    },
+    {
+      "id": "2",
+      "title": "বাল্ক শিপমেন্ট",
+      "image": "https://i.ibb.co/YffrqP7/bulk-shipment.webp",
+      "description": "বড় আইটেম এবং বড় সংখ্যক ডেলিভারির বিশেষ সমাধান"
+    },
+    {
+      "id": "3",
+      "title": "লাইন হল",
+      "image": "https://i.ibb.co/8m0t339/line-haul.webp",
+      "description": "এফটিএল (পুরো ট্রাকলোড) ও এলটিএল (আংশিক ট্রাকলোড) সহ মালামাল পরিবহনের সকল সমাধান"
+    },
+    {
+      "id": "4",
+      "title": "ওয়্যারহাউজ",
+      "image": "https://i.ibb.co/Cnck62Z/warehouse.webp",
+      "description": "সংরক্ষন, বাছাই এবং প্রক্রিয়াজাতকরণের পরিপূর্ণ সমাধান"
+    },
+    {
+      "id": "5",
+      "title": "ট্রাক ভাড়া",
+      "image": "https://i.ibb.co/HzpMqHS/truck-rent.webp",
+      "description": "খোলা ট্রাক এবং কাভার্ড ভ্যান দেশের যে কোন জায়গায় যে কোন সময়"
+    },
+    {
+      "id": "6",
+      "title": "লোড-আনলোড",
+      "image": "https://i.ibb.co/mzsd0p0/load-unload.webp",
+      "description": "ইন্ডাস্ট্রি-অনুযায়ী ফ্যাক্টরি, প্রজেক্ট এবং বন্দরগুলোতে লোডিং-আনলোডিংয়ের সুবিধা"
+    },
+    {
+      "id": "7",
+      "title": "লজিস্টিকস সেবা",
+      "image": "https://i.ibb.co/TknHNF3/logistics-service.webp",
+      "description": "লজিস্টিকস সংক্রান্ত যে কোন সমস্যার সমাধানে অভিজ্ঞ টিমের সহায়তা"
+    },
+    {
+      "id": "8",
+      "title": "কাস্টমাইজ সমাধান",
+      "image": "https://i.ibb.co/NLdqFCs/customised-solutions.webp",
+      "description": "আপনার ব্যবসায়িক ধরনের প্রয়োজন বুঝে কাস্টমাইজড সল্যুশন"
+    }
+  ]
