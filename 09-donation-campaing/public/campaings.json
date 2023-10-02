@@ -1,0 +1,138 @@
+[
+  {
+    "id": "1",
+    "picture": "https://i.ibb.co/fv3TZQj/health.jpg",
+    "text_color": "#0052FF",
+    "card_bg_color": "#0052ff26",
+    "button_bg_color": "#0052ff33",
+    "title": "Clean water for children",
+    "category": "Health",
+    "price": 150,
+    "description": "In the pursuit of a better world, few causes are as noble as the promotion of health and wellness. At its core, this mission embodies the very essence of human compassion, the desire to alleviate suffering, and the commitment to provide every individual with the opportunity to lead a life defined by vitality and well-being. Your contribution to this cause can make a profound difference, enabling organizations and initiatives to provide essential medical care, access to medications, and health education to those in need. Together, we can bridge gaps in healthcare, ensure that no one is denied treatment due to financial constraints, and work towards a world where everyone has the chance to lead a healthy, fulfilling life."
+  },
+  {
+    "id": "2",
+    "picture": "https://i.ibb.co/WDHPCDq/education.jpg",
+    "text_color": "#FF444A",
+    "card_bg_color": "#ff444a26",
+    "button_bg_color": "#ff444a33",
+    "title": "Good education",
+    "category": "Education",
+    "price": 50,
+    "description": "Hunger is a stark reality for millions around the world, a cruel reminder of the imbalances that persist in our society. But it's a problem with a solution within reach – your support can help us take a giant step towards eradicating hunger. Whether it's contributing to food banks, supporting community kitchens, or participating in meal programs, your donation will have a direct impact on those facing food insecurity. We believe that hunger should never stand as a barrier to a child's future. Your generosity can provide nourishing meals to those who need them most, helping us work towards a future where no one goes to bed hungry. Join us in this campaign against hunger, and together, we can make a significant difference in the lives of individuals and families struggling to put food on their tables."
+  },
+  {
+    "id": "3",
+    "picture": "https://i.ibb.co/D8Gw4XW/clothing.jpg",
+    "text_color": "#79C23F",
+    "card_bg_color": "#79c23f26",
+    "button_bg_color": "#79c23f33",
+    "title": "Used Clothing Drive",
+    "category": "Clothing",
+    "price": 200,
+    "description": "Education is the cornerstone of progress, the catalyst for transformation, and the beacon of hope for countless individuals striving for a better life. By supporting education, you are not merely funding classrooms; you are investing in the future, empowering young minds to overcome barriers and shaping a world where opportunities abound. Your donation to this cause fuels scholarships, supplies classrooms with essential learning materials, and supports educational programs for disadvantaged students. It's about bridging the gap, ensuring that no child is left behind due to a lack of access to quality education. Your contribution equips students with the knowledge and skills they need to become leaders, scientists, artists, and thinkers of tomorrow. Join us in this journey to empower minds through education, because when we invest in education, we invest in a brighter, more equitable future."
+  },
+  {
+    "id": "4",
+    "picture": "https://i.ibb.co/cLhyh9n/food.jpg",
+    "text_color": "#F87147",
+    "card_bg_color": "#f8714726",
+    "button_bg_color": "#f8714733",
+    "title": "Better Food for Everyone",
+    "category": "Food",
+    "price": 30,
+    "description": "Clothing is not merely a matter of fashion; it's a matter of dignity, comfort, and self-esteem. For many, access to proper clothing is a daily struggle. Your donation to this cause ensures that individuals, particularly those facing hardship, have access to clean and appropriate clothing. Your contribution can provide clothing for families, offering warmth during harsh winters and relief during scorching summers. Additionally, it supports clothing drives and initiatives that distribute clothing to homeless individuals, refugees, and disaster survivors. Clothing is about more than just fabric; it's about empowerment. It empowers individuals to present themselves with confidence, to attend school, job interviews, and social gatherings. It gives people a sense of belonging and self-worth. Together, we can ensure that no one has to go without proper clothing, regardless of their circumstances. Join us in this campaign to dress lives with dignity and make an impact on the lives of those who need it most."
+  },
+
+  {
+    "id": "5",
+    "picture": "https://i.ibb.co/WDHPCDq/education.jpg",
+    "text_color": "#FF444A",
+    "card_bg_color": "#ff444a26",
+    "button_bg_color": "#ff444a33",
+    "title": "Good education",
+    "category": "Education",
+    "price": 75,
+    "description": "Families across the globe face the harsh reality of hunger every day. Your support can help nourish these families and put an end to food insecurity. Your donation of $75 can provide a month's supply of essential groceries to a struggling family. Together, we can work towards a world where no one has to worry about where their next meal will come from. Join us in the fight against hunger, and let's nourish families and communities together."
+  },
+
+  {
+    "id": "6",
+    "picture": "https://i.ibb.co/D8Gw4XW/clothing.jpg",
+    "text_color": "#79C23F",
+    "card_bg_color": "#79c23f26",
+    "button_bg_color": "#79c23f33",
+    "title": "Used Clothing Drive",
+    "category": "Clothing",
+    "price": 250,
+    "description": "Education is the foundation upon which dreams are built. Your contribution can transform lives by supporting quality education, scholarships, and educational infrastructure. Your generous donation of $250 can provide a year's worth of textbooks and school supplies for a deserving student. Join us in building brighter futures through education, where every child has the opportunity to learn, grow, and succeed."
+  },
+
+  {
+    "id": "7",
+    "picture": "https://i.ibb.co/cLhyh9n/food.jpg",
+    "text_color": "#F87147",
+    "card_bg_color": "#f8714726",
+    "button_bg_color": "#f8714733",
+    "title": "Better Food for Everyone",
+    "category": "Food",
+    "price": 40,
+    "description": "Access to proper clothing is essential for comfort and dignity. Your support can provide warm clothing for individuals in need during winter and suitable attire for job interviews and daily life. Your donation of $40 can supply a winter coat, gloves, and a scarf to someone facing the cold season without adequate protection. Join us in spreading warmth for all seasons and ensuring that everyone has suitable clothing to face the challenges of life."
+  },
+  {
+    "id": "8",
+    "picture": "https://i.ibb.co/fv3TZQj/health.jpg",
+    "text_color": "#0052FF",
+    "card_bg_color": "#0052ff26",
+    "button_bg_color": "#0052ff33",
+    "title": "Clean water for children",
+    "category": "Health",
+    "price": 120,
+    "description": "Every child deserves a healthy start in life. Your donation can make a significant impact by supporting pediatric healthcare, vaccinations, and nutrition programs. Together, we can ensure that children have access to the medical care they need to thrive and grow. Your generous contribution of $120 can provide vital vaccinations and preventive care to protect children from life-threatening diseases. Join us in giving hope for children's health and a brighter future."
+  },
+
+  {
+    "id": "9",
+    "picture": "https://i.ibb.co/D8Gw4XW/clothing.jpg",
+    "text_color": "#79C23F",
+    "card_bg_color": "#79c23f26",
+    "button_bg_color": "#79c23f33",
+    "title": "Used Clothing Drive",
+    "category": "Clothing",
+    "price": 300,
+    "description": "Higher education can open doors to countless opportunities, but it often comes with a significant financial burden. Your contribution can change lives by funding scholarships for deserving students. Your generous donation of $300 can cover a portion of tuition fees for a university-bound student. Join us in supporting higher education and empowering the next generation of leaders and innovators."
+  },
+  {
+    "id": "10",
+    "picture": "https://i.ibb.co/WDHPCDq/education.jpg",
+    "text_color": "#FF444A",
+    "card_bg_color": "#ff444a26",
+    "button_bg_color": "#ff444a33",
+    "title": "Good education",
+    "category": "Education",
+    "price": 90,
+    "description": "During times of crisis, access to food becomes even more challenging. Your support can provide emergency food relief to communities affected by disasters and emergencies. Your donation of $90 can supply essential food packages to families in crisis, ensuring they have sustenance during challenging times. Join us in providing emergency food relief to those in need."
+  },
+  {
+    "id": "11",
+    "picture": "https://i.ibb.co/fv3TZQj/health.jpg",
+    "text_color": "#0052FF",
+    "card_bg_color": "#0052ff26",
+    "button_bg_color": "#0052ff33",
+    "title": "Clean water for children",
+    "category": "Health",
+    "price": 180,
+    "description": "Maternal health is a critical concern, and your contribution can help ensure safe pregnancies and childbirth. Your donation of $180 can provide prenatal care and support to expectant mothers, reducing the risks associated with childbirth. Join us in supporting maternal health and giving every mother the care and attention she deserves."
+  },
+  {
+    "id": "12",
+    "picture": "https://i.ibb.co/cLhyh9n/food.jpg",
+    "text_color": "#F87147",
+    "card_bg_color": "#f8714726",
+    "button_bg_color": "#f8714733",
+    "title": "Better Food for Everyone",
+    "category": "Food",
+    "price": 50,
+    "description": "Many veterans face challenges when transitioning back to civilian life, including access to appropriate clothing for job interviews and daily life. Your support can provide dignified clothing to honor their service. Your donation of $50 can supply professional attire and essentials for a veteran in need. Join us in showing our appreciation and support for our veterans."
+  }
+]
