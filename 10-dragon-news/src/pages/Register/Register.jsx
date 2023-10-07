@@ -2,30 +2,29 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
 import Header from "../Shared/Header/Header";
+import Navbar from "../Shared/Navbar/Navbar";
 
 const Register = () => {
   const { currentUser } = useContext(AuthContext);
 
-
   const handleLogin = (e) => {
     e.preventDefault();
-    console.log(e);
     const form = new FormData(e.currentTarget);
     const email = form.get("email");
     const password = form.get("password");
 
     currentUser(email, password)
-    .then(result=>  {
+      .then((result) => {
         console.log(result.user);
-    })
-    .catch(error=>{
+      })
+      .catch((error) => {
         console.log(error);
-    })
+      });
   };
   return (
     <>
       <Header></Header>
-
+      <Navbar></Navbar>
       <div className="hero min-h-screen ">
         <div className="hero-content flex-col ">
           <div className="text-center  ">

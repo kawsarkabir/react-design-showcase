@@ -1,19 +1,34 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Header from "../Shared/Header/Header";
- 
+import { useContext } from "react";
+import { AuthContext } from "../../provider/AuthProvider";
+import Navbar from "../Shared/Navbar/Navbar";
 
 const Login = () => {
+    const location = useLocation()
+    console.log(location);
+
+    const navigate = useNavigate()
+
+
+  const { login } = useContext(AuthContext);
   const handleLogin = (e) => {
     e.preventDefault();
-    // const email = e.target.email.value;
-    // const password = e.target.password.value;
     const form = new FormData(e.currentTarget);
-    console.log(form.get("email"));
-    console.log(form.get("password"));
+    const email = form.get("email");
+    const password = form.get("password");
+
+    login(email, password)
+      .then((result) => {
+        console.log(result.user);
+        navigate(location?.state ? location.state : '/')
+      })
+      .catch((error) => console.log(error));
   };
   return (
     <div>
       <Header></Header>
+      <Navbar></Navbar>
       <div>
         <div className="hero min-h-screen ">
           <div className="hero-content flex-col ">
