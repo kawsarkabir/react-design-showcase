@@ -1,5 +1,5 @@
 {
-  "name": "10-dragon-news",
+  "name": "react-dragon-news-auth",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,11 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "firebase": "^10.4.0",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",
     "moment": "^2.29.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-fast-marquee": "^1.6.1",
+    "react-icons": "^4.11.0",
     "react-router-dom": "^6.16.0",
     "sort-by": "^1.2.0"
   },
@@ -23,7 +26,7 @@
     "@types/react-dom": "^18.2.7",
     "@vitejs/plugin-react": "^4.0.3",
     "autoprefixer": "^10.4.16",
-    "daisyui": "^3.9.2",
+    "daisyui": "^3.8.2",
     "eslint": "^8.45.0",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
