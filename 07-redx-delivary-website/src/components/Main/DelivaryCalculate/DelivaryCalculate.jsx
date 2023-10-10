@@ -1,4 +1,3 @@
-import React from "react";
 import Modal from "./Modal";
 
 const DelivaryCalculate = () => {
@@ -6,8 +5,8 @@ const DelivaryCalculate = () => {
         document.getElementById('my_modal').showModal()
     }
   return (
-    <div className="full-website flex justify-center items-center my-20 px-5">
-      <div>
+    <div className="full-website flex justify-center items-center  px-5">
+      <div className="my-20">
         <div className="text-center">
           <h1 className=" font-extrabold text-4xl my-3">
             ডেলিভারি ক্যালকুলেটর

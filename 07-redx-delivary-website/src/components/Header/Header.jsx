@@ -1,4 +1,4 @@
-import React from "react";
+import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -27,27 +27,69 @@ const Header = () => {
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <a>এন্টারপ্রাইজ</a>
+                <NavLink
+                  to="/enterprice"
+                  className={({ isActive, isPending }) =>
+                    isPending
+                      ? "pending"
+                      : isActive
+                      ? "  bg-red-500 px-8 py-2 rounded"
+                      : ""
+                  }
+                >
+                  এন্টারপ্রাইজ
+                </NavLink>
               </li>
 
               <li>
-                <a>কুরিয়ার</a>
+                <NavLink
+                  to="/curier"
+                  className={({ isActive, isPending }) =>
+                    isPending
+                      ? "pending"
+                      : isActive
+                      ? " bg-red-500 px-8 py-2 rounded"
+                      : ""
+                  }
+                >
+                  কুরিয়ার
+                </NavLink>
               </li>
             </ul>
           </div>
-          <a className="btn btn-ghost normal-case text-xl">
-            <img
-              src="https://i.ibb.co/Hrqsk3m/new-redx-logo.png"
-              alt=""
-            />
-          </a>
+          <Link to={`/`} className="btn btn-ghost normal-case text-xl">
+            <img src="https://i.ibb.co/Hrqsk3m/new-redx-logo.png" alt="" />
+          </Link>
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1 text-lg">
               <li>
-                <a>এন্টারপ্রাইজ</a>
+                <NavLink
+                  to="/enterprice"
+                  className={({ isActive, isPending }) =>
+                    isPending
+                      ? "pending"
+                      : isActive
+                      ? "  bg-red-500 px-8 py-2 rounded"
+                      : ""
+                  }
+                >
+                  এন্টারপ্রাইজ
+                </NavLink>
               </li>
+
               <li>
-                <a>কুরিয়ার</a>
+                <NavLink
+                  to="/curier"
+                  className={({ isActive, isPending }) =>
+                    isPending
+                      ? "pending"
+                      : isActive
+                      ? " bg-red-500 px-8 py-2 rounded"
+                      : ""
+                  }
+                >
+                  কুরিয়ার
+                </NavLink>
               </li>
             </ul>
           </div>
@@ -62,7 +104,7 @@ const Header = () => {
           <a href="#" className="hidden lg:block md:block">
             CALL US <span className="text-red-600 mr-6 ml-2"> 09610007339</span>
           </a>
-          <a className="btn border-2 btn-outline px-10 btn-error">Login</a>
+          <Link to={`/login`} className="btn border-2 btn-outline px-10 btn-error">Login</Link>
         </div>
       </div>
     </div>

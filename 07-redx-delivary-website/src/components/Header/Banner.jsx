@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
@@ -39,9 +39,9 @@ const Banner = () => {
               </label>
             </div>
             <div className="form-control mt-6">
-              <button className="btn text-white bg-red-500 border-0 hover:bg-black hover:text-red-500">
-                সাইন-আপ
-              </button>
+             
+                <Link to={`/register`} className="btn text-white bg-red-500 border-0 hover:bg-black hover:text-red-500">সাইন-আপ</Link>
+             
             </div>
             <div className="flex">
               <div className="grid flex-grow">
