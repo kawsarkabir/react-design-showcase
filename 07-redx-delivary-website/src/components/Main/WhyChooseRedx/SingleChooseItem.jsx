@@ -1,4 +1,4 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 
 const SingleChooseItem = ({chooseItems}) => {
     return (
@@ -9,5 +9,7 @@ const SingleChooseItem = ({chooseItems}) => {
         </div>
     );
 };
-
+SingleChooseItem.propTypes={
+    chooseItems: PropTypes.object.isRequired
+}
 export default SingleChooseItem;
