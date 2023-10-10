@@ -1,12 +1,20 @@
 import Modal from "./Modal";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const DelivaryCalculate = () => {
-    const handleModalClick=()=>{
-        document.getElementById('my_modal').showModal()
-    }
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+    });
+  }, [])
+  const handleModalClick = () => {
+    document.getElementById("my_modal").showModal();
+  };
   return (
     <div className="full-website flex justify-center items-center  px-5">
-      <div className="my-20">
+      <div data-aos="fade-up" className="my-20">
         <div className="text-center">
           <h1 className=" font-extrabold text-4xl my-3">
             ডেলিভারি ক্যালকুলেটর
@@ -83,8 +91,13 @@ const DelivaryCalculate = () => {
           </p>
           <span>
             আমাদের বিস্তারিত
-            <button onClick={handleModalClick} className="ml-2 text-red-600 font-bold">লিস্টটি দেখুন।</button>
-            <Modal/>
+            <button
+              onClick={handleModalClick}
+              className="ml-2 text-red-600 font-bold"
+            >
+              লিস্টটি দেখুন।
+            </button>
+            <Modal />
           </span>
         </div>
       </div>
