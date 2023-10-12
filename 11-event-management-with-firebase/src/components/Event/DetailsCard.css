@@ -1,0 +1,22 @@
+.details-card-banner {
+    background: url("https://i.ibb.co/gZWkQ3D/breadcrumb-bg.png");
+   
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(100%,rgba(45,55,60,0.9)),to(rgba(45,55,60,0.9))),url("https://i.ibb.co/gZWkQ3D/breadcrumb-bg.png");
+    background: linear-gradient(rgba(45,55,60,0.9) 100%,rgba(45,55,60,0.9) 100%),url("https://i.ibb.co/gZWkQ3D/breadcrumb-bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 60vh;
+    margin-top: 2rem;
+}
+.tryphography{
+    line-height: 1;
+    font-weight: 900;
+    font-size: 60px;
+    text-transform: uppercase;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px #2f383e;
+    word-break: break-all;
+   
+}
+ 

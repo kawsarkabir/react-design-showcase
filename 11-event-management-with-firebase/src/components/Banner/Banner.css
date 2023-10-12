@@ -1,0 +1,51 @@
+.banner-section{
+  background: conic-gradient(from 243.17deg at 52.66% 45.72%,rgba(206,20,70,0.25) 0deg,rgba(255,255,255,0) 66.85deg,rgba(222,95,129,0.3) 266.25deg,rgba(206,20,70,0.25) 360deg);
+
+}
+.color-primary {
+  color: #ce1446;
+}
+.banner-content h1 {
+  color: #2d373c;
+}
+.custom-bg {
+  background-color: #ce1446;
+}
+.book-now-btn {
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 17px;
+  color: #fff;
+  font-family: barlow, sans-serif;
+  background: #ce1446;
+  border-radius: 5px;
+  border: 2px solid #ce1446;
+  display: inline-block;
+  padding: 8px 45px;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+  margin-right: 20px;
+}
+.book-now-btn:hover {
+  background: 0, 0;
+  color: #ce1446;
+}
+.view-details-btn {
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 17px;
+  font-family: barlow, sans-serif;
+  border-radius: 5px;
+  border: 2px solid #ce1446;
+  display: inline-block;
+  padding: 8px 45px;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+  background: 0 0;
+  color: #ce1446;
+  margin-right: 8px;
+}
+.view-details-btn:hover {
+  color: #fff;
+  background: #ce1446;
+}

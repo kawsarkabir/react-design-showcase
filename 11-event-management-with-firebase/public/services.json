@@ -1,0 +1,63 @@
+[
+  {
+    "title": "Audiovisual Excellence",
+    "price": "$2,500",
+    "seat": "500",
+    "description": "Experience audiovisual excellence with our setup and support services. Our professional team ensures seamless presentations.",
+
+    "id": "1",
+    "img": "https://i.ibb.co/cbV8vbg/brooke-cagle-u-HVRv-Dr7pg-unsplash.jpg",
+    "publish_date": "January 21, 2021",
+    "location": " Broadw, New York"
+  },
+  {
+    "title": "Tech Troubleshooting",
+    "price": "$2,500",
+    "seat": "500",
+    "description": "Ensure seamless tech operation with our on-site tech support team. Our skilled technicians troubleshoot and  .",
+    "id": "2",
+    "img": "https://i.ibb.co/zVL3zqL/annie-spratt-sggw4-q-DD54-unsplash.jpg",
+    "publish_date": "January 21, 2021",
+    "location": " Broadw, New York"
+  },
+  {
+    "title": "Event Marketing",
+    "price": "$2,500",
+    "seat": "500",
+    "description": "Tailored marketing strategies, including social media campaigns and email marketing, to boost event attendance and engagement.",
+    "id": "3",
+    "img": "https://i.ibb.co/SKd71Y1/campaign-creators-g-Msn-Xq-ILjp4-unsplash.jpg",
+    "publish_date": "January 21, 2021",
+    "location": " Broadw, New York"
+  },
+  {
+    "title": "On-Site Tech Support",
+    "price": "$2,500",
+    "seat": "500",
+    "description": "Skilled technical support staff to troubleshoot and ensure the smooth operation of all tech-related aspects during the event.",
+    "id": "4",
+    "img": "https://i.ibb.co/SKd71Y1/campaign-creators-g-Msn-Xq-ILjp4-unsplash.jpg",
+    "publish_date": "January 21, 2021",
+    "location": " Broadw, New York"
+  },
+  {
+    "title": "Registration Management",
+    "price": "$2,500",
+    "seat": "500",
+    "description": "Online and on-site registration services, including badge printing, attendee check-in, and data management.",
+    "id": "5",
+    "img": "https://i.ibb.co/qD5wrML/jason-goodman-Oalh2-Moj-Uuk-unsplash.jpg",
+    "publish_date": "January 21, 2021",
+    "location": " Broadw, New York"
+  },
+  {
+    "title": "Full Event Planning",
+    "price": "$2,500",
+    "seat": "500",
+    "description": "Comprehensive event planning and coordination, from initial concept to execution, including venue  managementv.",
+    "id": "6",
+    "img": " https://i.ibb.co/Cm255qw/tim-van-der-kuip-CPs2-X8-JYm-S8-unsplash.jpg",
+    "publish_date": "January 21, 2021",
+    "location": " Broadw, New York"
+  }
+]
