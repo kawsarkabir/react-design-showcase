@@ -8,6 +8,10 @@ const Feedback = () => {
     <div>
       <Swiper
         slidesPerView={"auto"}
+        /* autoplay={{
+          delay: 5000,
+          disableOnInteraction: false,
+        }} */
         spaceBetween={10}
         pagination={{
           clickable: true,
