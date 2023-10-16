@@ -23,16 +23,7 @@ const Navbar = () => {
           Add Coffee
         </NavLink>
       </li>
-      <li>
-        <NavLink
-          to="/updateCoffee"
-          className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "active " : ""
-          }
-        >
-          Update Coffee
-        </NavLink>
-      </li>
+      
       <li>
         <NavLink
           to="/login"
