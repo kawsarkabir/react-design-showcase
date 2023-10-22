@@ -1,9 +1,13 @@
+import Banner from "../../components/header/banner/Banner";
+import Footer from "../../components/shared/footer/Footer";
+
  
 
 const Home = () => {
     return (
         <div>
-            <h1>this is home</h1>
+            <Banner></Banner>
+            <Footer></Footer>
         </div>
     );
 };
