@@ -36,7 +36,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="navbar bg-base-100 max-w-screen-xl mx-auto">
+    <div className="navbar bg-base-100 max-w-screen-xl mx-auto px-4">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -62,8 +62,12 @@ const Navbar = () => {
             {navLinks}
           </ul>
         </div>
-        <Link  to={'/'} >
-          <img src="https://i.ibb.co/XssN0CN/logo.png" alt="" className="w-16" />
+        <Link to={"/"}>
+          <img
+            src="https://i.ibb.co/XssN0CN/logo.png"
+            alt=""
+            className="w-16"
+          />
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex navbar-end">
