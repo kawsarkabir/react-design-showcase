@@ -1,6 +1,6 @@
 const AboutUs = () => {
   return (
-    <div className="max-w-screen-xl mx-auto my-20 px-4">
+    <div className="max-w-screen-xl mx-auto mt-20 px-4">
       <div className="hero">
         <div className="flex flex-col lg:flex-row gap-10">
           <div>
