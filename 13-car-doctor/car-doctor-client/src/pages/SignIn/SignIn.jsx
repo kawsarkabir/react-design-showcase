@@ -2,8 +2,11 @@ import { Link } from "react-router-dom";
 import "./SignIn.css";
 const SignIn = () => {
   return (
-    <div className="mx-auto max-w-screen-xl my-20">
-      <div className="flex justify-center items-center">
+    <div className="mx-auto max-w-screen-xl my-20 ">
+      <div className=" grid grid-cols-1 lg:grid-cols-2 gap-5 justify-center justify-items-center">
+        <div>
+          <img src="https://i.ibb.co/VC6R06W/login.png" alt="" />
+        </div>
         <form className="form">
           <h1 className="text-center font-semibold text-3xl">Sign in now !</h1>
           <div className="flex-column">
@@ -58,7 +61,7 @@ const SignIn = () => {
           </div>
           <button className="button-submit">Sign In</button>
           <p className="p">
-            Don't have an account?{" "}
+            Do not have an account?{" "}
             <Link to={"/signup"}>
               <span className="span">Sign Up</span>
             </Link>

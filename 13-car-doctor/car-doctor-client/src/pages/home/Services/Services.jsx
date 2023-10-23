@@ -16,6 +16,9 @@ const Services = () => {
         <ServiceCard key={service._id} service={service}></ServiceCard>
       ))}
     </div>
+    <div className="text-center mt-10">
+        <button className="btn bg-[#FF3818] text-white border-none px-10"> SEE MORE</button>
+    </div>
     </>
   );
 };

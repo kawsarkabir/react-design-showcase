@@ -1,9 +1,39 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
+import Swal from "sweetalert2";
 
 const SignUp = () => {
+  const { createUser } = useContext(AuthContext);
+  const handleSignUp = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const name = form.name.value;
+    const email = form.email.value;
+    const photoURL = form.photoURL.value;
+    const password = form.password.value;
+    const user = { name, email, photoURL, password };
+ 
+
+    // create user
+    createUser(email, password)
+      .then(() => {
+        Swal.fire(
+          'Good job!',
+          'Your Account Successfully Create!',
+          'success'
+        )
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
+  };
   return (
-    <div className="my-14 flex justify-center items-center">
-      <form className="form">
+    <div className="my-14 max-w-screen-xl mx-auto justify-center justify-items-center grid grid-cols-1 lg:grid-cols-2 gap-5">
+      <div>
+        <img src="https://i.ibb.co/VC6R06W/login.png" alt="" />
+      </div>
+      <form onSubmit={handleSignUp} className="form">
         <h1 className="text-center font-semibold text-3xl">Sign up now !</h1>
         <div className="flex-column">
           <label>Name </label>
@@ -99,9 +129,9 @@ const SignUp = () => {
         </div>
         <button className="button-submit">Sign Up</button>
         <p className="p">
-          Don't have an account ?
+          Already have an account ?
           <Link to={"/signin"}>
-            <span className="span">Sign Up</span>
+            <span className="span">Sign In</span>
           </Link>
         </p>
       </form>
