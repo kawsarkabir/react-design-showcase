@@ -1,9 +1,10 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
 
 const SignUp = () => {
+  const navigate = useNavigate();
   const { createUser } = useContext(AuthContext);
   const handleSignUp = (e) => {
     e.preventDefault();
@@ -13,16 +14,12 @@ const SignUp = () => {
     const photoURL = form.photoURL.value;
     const password = form.password.value;
     const user = { name, email, photoURL, password };
- 
 
     // create user
     createUser(email, password)
       .then(() => {
-        Swal.fire(
-          'Good job!',
-          'Your Account Successfully Create!',
-          'success'
-        )
+        navigate("/");
+        Swal.fire("Good job!", "Your Account Successfully Create!", "success");
       })
       .catch((error) => {
         console.log(error.message);

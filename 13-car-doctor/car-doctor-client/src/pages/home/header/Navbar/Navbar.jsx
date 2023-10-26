@@ -1,6 +1,11 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../../../AuthProvider/AuthProvider";
+import Swal from "sweetalert2";
 
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext);
+
   const navLinks = (
     <>
       <li>
@@ -35,6 +40,16 @@ const Navbar = () => {
       </li>
     </>
   );
+
+  const handleSignOut = () => {
+    logOut()
+      .then(() => {
+        Swal.fire("Good job!", "Successfully logout!", "success");
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+  };
   return (
     <div className="navbar bg-base-100 max-w-screen-xl mx-auto px-6 py-4">
       <div className="navbar-start">
@@ -77,6 +92,27 @@ const Navbar = () => {
         <button className="btn btn-outline text-[#FF3818] py-0">
           Appointment
         </button>
+        {user && (
+          <div className="dropdown dropdown-end">
+            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+              <div className="w-10 rounded-full">
+                <img src={user?.photoURL} />
+              </div>
+            </label>
+            <ul
+              tabIndex={0}
+              className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
+            >
+              <li>
+                <Link className="justify-between">{user?.displayName}</Link>
+              </li>
+
+              <li>
+                <Link onClick={handleSignOut}>Logout</Link>
+              </li>
+            </ul>
+          </div>
+        )}
       </div>
     </div>
   );

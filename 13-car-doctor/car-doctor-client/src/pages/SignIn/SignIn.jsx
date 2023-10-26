@@ -1,13 +1,49 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./SignIn.css";
+import { useContext } from "react";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
+import Swal from "sweetalert2";
+
 const SignIn = () => {
+  const { signIn, signInGoogle } = useContext(AuthContext);
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleSignIn = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const email = form.email.value;
+    const password = form.password.value;
+    const user = { email, password };
+
+    // sign  user
+    signIn(email, password)
+      .then(() => {
+        Swal.fire("Good job!", "Successfully Login!", "success");
+        navigate(location?.state ? location.state : "/");
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
+
+    // sign in with google
+  };
+  const handleSignInWithGoogle = () => {
+    signInGoogle()
+      .then(() => {
+        navigate(location?.state ? location.state : "/");
+      })
+      .then((err) => {
+        console.log(err.message);
+      });
+  };
   return (
     <div className="mx-auto max-w-screen-xl my-20 ">
       <div className=" grid grid-cols-1 lg:grid-cols-2 gap-5 justify-center justify-items-center">
         <div>
           <img src="https://i.ibb.co/VC6R06W/login.png" alt="" />
         </div>
-        <form className="form">
+        <form onSubmit={handleSignIn} className="form">
           <h1 className="text-center font-semibold text-3xl">Sign in now !</h1>
           <div className="flex-column">
             <label>Email </label>
@@ -24,10 +60,10 @@ const SignIn = () => {
               </g>
             </svg>
             <input
-              name="name"
+              name="email"
               placeholder="Enter your Email"
               className="input"
-              type="text"
+              type="email"
             />
           </div>
           <div className="flex-column">
@@ -68,7 +104,7 @@ const SignIn = () => {
           </p>
           <p className="p line">Or With</p>
           <div className="flex-row">
-            <button className="myButton google">
+            <button onClick={handleSignInWithGoogle} className="myButton google">
               <svg
                 xmlSpace="preserve"
                 style={{ enableBackground: "new 0 0 512 512" }}
