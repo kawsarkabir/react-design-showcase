@@ -23,19 +23,43 @@ const client = new MongoClient(uri, {
 
 async function run() {
   const serviceCollection = client.db("carDoctor").collection("services");
+  const checkOutFormCollection = client
+    .db("carDoctor")
+    .collection("checkOutForm");
 
+  // get all data with get methods
   app.get("/services", async (req, res) => {
     res.send(await serviceCollection.find().toArray());
   });
 
+  // get single id data with params id query
   app.get("/services/:id", async (req, res) => {
     const id = req.params.id;
     const query = { _id: new ObjectId(id) };
     const options = {
-      projection: {title: 1, img:1 },
+      projection: { title: 1, img: 1, price: 1 },
     };
     res.send(await serviceCollection.findOne(query, options));
   });
+
+  // post with checkout form data
+  app.post("/checkout", async (req, res) => {
+    const checkout = req.body;
+    res.send(await checkOutFormCollection.insertOne(checkout));
+  });
+
+  app.get('/checkout', async(req, res)=>{
+    let query = {}
+    if(req.query?.email){
+      query = {email:req.query.email}
+    }
+    res.send(await checkOutFormCollection.find(query).toArray())
+  })
+  app.delete('/checkout/:id', async(req, res)=>{
+    const id = req.params.id;
+    const query = {_id: new ObjectId(id)}
+    res.send(await checkOutFormCollection.deleteOne(query))
+  })
 
   try {
     console.log(
