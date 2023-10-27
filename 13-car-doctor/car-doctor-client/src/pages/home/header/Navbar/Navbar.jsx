@@ -89,29 +89,33 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{navLinks}</ul>
       </div>
       <div className="navbar-end">
-        <button className="btn btn-outline text-[#FF3818] py-0">
-          Appointment
-        </button>
         {user && (
-          <div className="dropdown dropdown-end">
-            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-              <div className="w-10 rounded-full">
-                <img src={user?.photoURL} />
-              </div>
-            </label>
-            <ul
-              tabIndex={0}
-              className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
-            >
-              <li>
-                <Link className="justify-between">{user?.displayName}</Link>
-              </li>
+          <>
+            <Link to={'/mycart'}>
+              <button className="btn btn-outline text-[#FF3818] mr-4">
+                MyCart
+              </button>
+            </Link>
+            <div className="dropdown dropdown-end">
+              <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                <div className="w-10 rounded-full">
+                  <img src={user?.photoURL} />
+                </div>
+              </label>
+              <ul
+                tabIndex={0}
+                className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
+              >
+                <li>
+                  <Link className="justify-between">{user?.displayName}</Link>
+                </li>
 
-              <li>
-                <Link onClick={handleSignOut}>Logout</Link>
-              </li>
-            </ul>
-          </div>
+                <li>
+                  <Link onClick={handleSignOut}>Logout</Link>
+                </li>
+              </ul>
+            </div>
+          </>
         )}
       </div>
     </div>

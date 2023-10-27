@@ -43,9 +43,9 @@ const AuthProvider = ({ children }) => {
   };
 
   //   signOUt
-  const logOut = ()=>{
-    return signOut(auth)
-  }
+  const logOut = () => {
+    return signOut(auth);
+  };
 
   const userInfo = {
     user,
@@ -53,7 +53,7 @@ const AuthProvider = ({ children }) => {
     loading,
     signIn,
     signInGoogle,
-    logOut
+    logOut,
   };
   return (
     <AuthContext.Provider value={userInfo}>{children}</AuthContext.Provider>

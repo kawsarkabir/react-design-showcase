@@ -49,7 +49,7 @@ const SignUp = () => {
           <input
             name="name"
             placeholder="Enter your Name"
-            className="input"
+            className="myinput"
             type="text"
           />
         </div>
@@ -70,7 +70,7 @@ const SignUp = () => {
           <input
             name="email"
             placeholder="Enter your Email"
-            className="input"
+            className="myinput"
             type="email"
           />
         </div>
@@ -91,7 +91,7 @@ const SignUp = () => {
           <input
             name="photoURL"
             placeholder="Enter your PhotoURL"
-            className="input"
+            className="myinput"
             type="text"
           />
         </div>
@@ -111,7 +111,7 @@ const SignUp = () => {
           <input
             name="password"
             placeholder="Enter your Password"
-            className="input"
+            className="myinput"
             type="password"
           />
         </div>

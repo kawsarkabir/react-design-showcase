@@ -62,7 +62,7 @@ const SignIn = () => {
             <input
               name="email"
               placeholder="Enter your Email"
-              className="input"
+              className="myinput"
               type="email"
             />
           </div>
@@ -82,7 +82,7 @@ const SignIn = () => {
             <input
               name="password"
               placeholder="Enter your Password"
-              className="input"
+              className="myinput"
               type="password"
             />
           </div>
