@@ -1,3 +1,4 @@
+import axios from "axios";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
@@ -15,19 +16,15 @@ const AllCoffee = ({ coffee, updateCoffee, setUpdateCoffee }) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/coffee/${_id}`, {
-          method: "DELETE",
+        axios.delete(`http://localhost:5000/coffee/${_id}`, {})
+        .then((data) => {
+          console.log(data.data);
+          if (data.data.deletedCount > 0) {
+            Swal.fire("Deleted!", "Your coffee has been deleted.", "success");
+            const remaining = updateCoffee.filter((cof) => cof._id !== _id);
+            setUpdateCoffee(remaining);
+          }
         })
-          .then((res) => res.json())
-          .then((data) => {
-            console.log(data);
-            if (data.deletedCount > 0) {
-              Swal.fire("Deleted!", "Your coffee has been deleted.", "success");
-              const remaining = updateCoffee.filter(cof=> cof._id !== _id);
-              setUpdateCoffee(remaining)
-            }
-
-          });
       }
     });
   };

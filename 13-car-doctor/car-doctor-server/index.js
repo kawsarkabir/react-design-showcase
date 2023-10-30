@@ -47,6 +47,18 @@ async function run() {
     const checkout = req.body;
     res.send(await checkOutFormCollection.insertOne(checkout));
   });
+  // update
+  app.patch("/checkout/:id", async (req, res) => {
+    const checkout = req.body;
+    const id = req.params.id;
+    const query = {_id: new ObjectId(id)}
+    const updateDoc= {
+      $set:{
+        status: updateDoc.status
+      }
+    }
+  
+  });
 
   app.get('/checkout', async(req, res)=>{
     let query = {}
