@@ -15,6 +15,7 @@ const SignIn = () => {
     const email = form.email.value;
     const password = form.password.value;
     const user = { email, password };
+    console.log(user);
 
     // sign  user
     signIn(email, password)
@@ -104,7 +105,10 @@ const SignIn = () => {
           </p>
           <p className="p line">Or With</p>
           <div className="flex-row">
-            <button onClick={handleSignInWithGoogle} className="myButton google">
+            <button
+              onClick={handleSignInWithGoogle}
+              className="myButton google"
+            >
               <svg
                 xmlSpace="preserve"
                 style={{ enableBackground: "new 0 0 512 512" }}

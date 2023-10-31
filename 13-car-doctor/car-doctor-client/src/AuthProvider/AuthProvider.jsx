@@ -30,20 +30,24 @@ const AuthProvider = ({ children }) => {
 
   // create a new user
   const createUser = (email, password) => {
+    setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
   //   sign in
   const signIn = (email, password) => {
+    setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
   //   sign in with google
   const signInGoogle = () => {
+    setLoading(true);
     return signInWithPopup(auth, provider);
   };
 
   //   signOUt
   const logOut = () => {
+    setLoading(true);
     return signOut(auth);
   };
 

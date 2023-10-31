@@ -1,7 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Layout from "../layout/Layout";
 import Home from "../pages/home/Home/Home";
-
 import SignIn from "../pages/SignIn/SignIn";
 import SignUp from "../pages/SignUp/SignUp";
 import CheckOut from "../pages/CheckOut/CheckOut";
@@ -26,14 +25,16 @@ const Router = createBrowserRouter([
         element: <SignUp></SignUp>,
       },
       {
-        path: '/checkout/:id', 
-        element: <PrivateRoute><CheckOut></CheckOut></PrivateRoute>,
-        loader: ({params})=> fetch(`http://localhost:5000/services/${params.id}`)
-      }, 
+        path: "/checkout/:id",
+        element: <PrivateRoute> <CheckOut></CheckOut> </PrivateRoute>
+        ,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/services/${params.id}`),
+      },
       {
-        path:'/mycart', 
+        path: "/mycart",
         element: <MyCart></MyCart>,
-      }
+      },
     ],
   },
 ]);
