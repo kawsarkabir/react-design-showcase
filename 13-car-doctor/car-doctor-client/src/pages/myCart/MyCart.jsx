@@ -1,16 +1,16 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import axios from "axios";
 
 const MyCart = () => {
   const { user } = useContext(AuthContext);
   const [mycart, setMyCart] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/checkout?email=${user?.email}`)
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        setMyCart(data);
+    axios
+      .get(`http://localhost:5000/checkout?email=${user?.email}`, {withCredentials: true})
+      .then((res) => {
+        setMyCart(res.data);
       });
   }, [user?.email]);
 
@@ -32,19 +32,6 @@ const MyCart = () => {
         });
     }
   };
-/*   const handleUpdated = (id) => {
-    fetch(`http://localhost:5000/checkout/${id}`, {
-      method: "PATCH",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify({ status: "confirm" }),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-      });
-  }; */
   return (
     <div className="max-w-screen-xl mx-auto my-20">
       {mycart.map((cart) => (

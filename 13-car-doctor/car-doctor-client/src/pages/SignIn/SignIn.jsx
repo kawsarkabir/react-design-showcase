@@ -3,6 +3,7 @@ import "./SignIn.css";
 import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
+import axios from "axios";
 
 const SignIn = () => {
   const { signIn, signInGoogle } = useContext(AuthContext);
@@ -21,7 +22,16 @@ const SignIn = () => {
     signIn(email, password)
       .then(() => {
         Swal.fire("Good job!", "Successfully Login!", "success");
-        navigate(location?.state ? location.state : "/");
+        // access the get tokern
+        const logInUser = { email };
+        axios
+          .post("http://localhost:5000/jwt", logInUser, {withCredentials: true})
+          .then((res) => {
+            console.log(res.data);
+            if (res.data.success) {
+              navigate(location?.state ? location.state : "/");
+            }
+          });
       })
       .catch((error) => {
         console.log(error.message);
