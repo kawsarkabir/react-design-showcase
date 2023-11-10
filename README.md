@@ -25,3 +25,18 @@ npm install
 # Run a specific project (replace 'project-name' with the actual project folder name)
 cd project-name
 npm start
+```
+
+## About the Author
+
+Hi, I'm kawsar kabir, a frontend developer passionate about creating engaging and user-friendly web experiences. This React Design Showcase reflects my dedication to exploring innovative design patterns and pushing the boundaries of frontend development.
+
+Feel free to connect with me on [https://www.linkedin.com/in/kawsarkabir] to discuss frontend development, design, or anything related to the exciting world of web development!
+
+## Contributing
+
+If you'd like to contribute to this project, please follow the [contributing guidelines](CONTRIBUTING.md).
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
