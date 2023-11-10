@@ -1,0 +1,39 @@
+.campaing-left {
+  background: url("https://i.ibb.co/fnnVVC7/campaign-cover-countdown.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  width: 600px;
+  background-position: bottom right;
+}
+.campaing-right {
+  background: url("https://i.ibb.co/18RTKhC/download-app-cover.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  width: 600px;
+  background-position: bottom right;
+}
+/* mobile device */
+@media screen and (max-width: 576px) {
+  .campaing-left {
+    height: 100%;
+    width: 100%;
+  }
+  .campaing-right {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+/* tablet device */
+@media screen and (min-width: 576px) and (max-width: 960px) {
+  .campaing-left {
+    height: 100%;
+    width: 100%;
+  }
+  .campaing-right {
+    height: 100%;
+    width: 100%;
+  }
+}

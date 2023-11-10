@@ -5,8 +5,9 @@ Welcome to the React Design Showcase repository! This repository contains a coll
 ## Table of Contents
 
 1. [How to Run](#how-to-run)
-2. [Contributing](#contributing)
-3. [License](#license)
+2. [About the Author](#about-the-author)
+3. [Contributing](#contributing)
+4. [License](#license)
 
 ## How to Run
 
@@ -29,9 +30,9 @@ npm start
 
 ## About the Author
 
-Hi, I'm kawsar kabir, a frontend developer passionate about creating engaging and user-friendly web experiences. This React Design Showcase reflects my dedication to exploring innovative design patterns and pushing the boundaries of frontend development.
+Hi, I'm Kawsar Kabir, a frontend developer passionate about creating engaging and user-friendly web experiences. This React Design Showcase reflects my dedication to exploring innovative design patterns and pushing the boundaries of frontend development.
 
-Feel free to connect with me on [https://www.linkedin.com/in/kawsarkabir] to discuss frontend development, design, or anything related to the exciting world of web development!
+Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/kawsarkabir/) to discuss frontend development, design, or anything related to the exciting world of web development!
 
 ## Contributing
 

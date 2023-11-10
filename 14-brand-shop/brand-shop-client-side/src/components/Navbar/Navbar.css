@@ -1,0 +1,173 @@
+ 
+/* common style here */
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.text-center{
+    text-align: center;
+}
+.text-left{
+    text-align: left;
+}
+.text-right{
+    text-align: right;
+}
+ul{
+    list-style: none;
+}
+/* common style end */
+
+/* =========== header section start here ============= */
+/* top navbar section start here */
+
+.top-navbar{
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+}
+.top-navbar ul{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.top-navbar ul li{
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+/* top navbar section end here */
+/* middle top navbar start here */
+.middle-navbar{
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+.search-bar{
+    display: flex;
+}
+.search-bar input{
+    padding: 13px 12px;
+    outline: none;
+    border: none;
+    border: 1px solid #f1f1ff;
+}
+.search-bar button{
+    padding: 13px 20px;
+    background-color:#FFBB38;
+    color: #000000;
+    border: none;
+    font-weight: 500;
+    position: relative;
+    right: 14px;
+}
+.search-bar div{
+    display: flex;
+}
+.search-bar .fa-angle-down{
+    position: relative;
+    right: 25px;
+    top: 15px;
+    color: #e0e0e0;
+}
+.navbar-icon-menu{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    position: relative;
+}
+.navbar-icon-menu i{
+    font-size: 1.8rem;
+}
+.circle-2{
+    background-color: #FFBB38;
+    color: #000000;
+    width: 24px;
+    height:24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 1.3rem;
+    right: 145px;
+    font-size: .8rem;
+    border-radius: 50%;
+}
+.circle-1{
+    background-color: #FFBB38;
+    color: #000000;
+    width: 24px;
+    height:24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 1.3rem;
+    right: 92px;
+    font-size: .8rem;
+    border-radius: 50%;
+}
+.circle-15{
+    background-color: #FFBB38;
+    color: #000000;
+    width: 24px;
+    height:24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 1.3rem;
+    right: 45px;
+    font-size: .8rem;
+    border-radius: 50%;
+}
+/* main navbar section style here */
+.main-navbar{
+    margin-top: 10px;
+    background-color: #FFBB38;
+    padding: 16px 0;
+
+}
+.main-navbar ul{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    color: #000000;
+    font-size: 1rem;
+    font-weight: 500;
+    justify-content: center;
+}
+.seller-btn{
+    background-color: #000000;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+
+}
+.main-navbar-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.main-navbar-wrapper .categories{
+    background-color: #fff;
+    color: #000000;
+    padding: 12px 10px;
+    width: 250px;
+    text-align: center;
+    position: relative;
+    top: 16px;
+}
+.categories .fa-bars{
+    position: relative;
+    right: 30px;
+}
+.categories .fa-angle-down{
+    position: relative;
+    left: 30px;
+}
