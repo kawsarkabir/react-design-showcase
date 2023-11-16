@@ -1,14 +1,14 @@
-import SectionHeader from "../Shared/SectionHeader/SectionHeader";
+import SectionHeader from "../../../Components/Shared/SectionHeader/SectionHeader";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
+import { Rating } from "@smastrom/react-rating";
+import "@smastrom/react-rating/style.css";
+import { useEffect, useState } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
-import { useEffect, useState } from "react";
-import { Rating } from "@smastrom/react-rating";
-import "@smastrom/react-rating/style.css";
 
 const Testimonial = () => {
   const [reviews, setReviews] = useState([]);

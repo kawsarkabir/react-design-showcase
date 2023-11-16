@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import SectionHeader from "../Shared/SectionHeader/SectionHeader";
+import SectionHeader from "../../../Components/Shared/SectionHeader/SectionHeader.jsx";
 import MenuItem from "./MenuItem";
 
 const PopularMenu = () => {

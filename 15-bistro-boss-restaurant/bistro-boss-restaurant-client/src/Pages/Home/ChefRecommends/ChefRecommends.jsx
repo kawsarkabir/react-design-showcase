@@ -1,4 +1,6 @@
-import SectionHeader from "../Shared/SectionHeader/SectionHeader";
+import SectionHeader from "../../../Components/Shared/SectionHeader/SectionHeader";
+
+ 
 
 const ChefRecommends = () => {
   return (

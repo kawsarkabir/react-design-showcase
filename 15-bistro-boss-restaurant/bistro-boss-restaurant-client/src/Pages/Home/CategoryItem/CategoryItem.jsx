@@ -7,7 +7,8 @@ import "swiper/css/pagination";
 
 // import required modules
 import { Pagination } from "swiper/modules";
-import SectionHeader from "../Shared/SectionHeader/SectionHeader";
+import SectionHeader from "../../../Components/Shared/SectionHeader/SectionHeader";
+
 const CategoryItem = () => {
   return (
     <div className="max-w-xl mx-auto">

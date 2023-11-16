@@ -1,4 +1,5 @@
-import SectionHeader from "../Shared/SectionHeader/SectionHeader";
+ 
+import SectionHeader from "../../../Components/Shared/SectionHeader/SectionHeader";
 import "./Features.css";
 const Features = () => {
   return (

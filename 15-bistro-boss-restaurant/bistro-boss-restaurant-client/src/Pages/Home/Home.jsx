@@ -1,23 +1,27 @@
-import CallUs from "../../Components/CallUs/CallUs";
-import CategoryItem from "../../Components/CategoryItem/CategoryItem";
-import ChefRecommends from "../../Components/ChefRecommends/ChefRecommends";
-import Features from "../../Components/Features/Features";
-import PopularMenu from "../../Components/PopularMenu/PopularMenu";
-import Testimonial from "../../Components/Testimonial/Testimonial";
+import { Helmet } from "react-helmet-async";
 import Banner from "../../Components/header/Banner/Banner";
+import CallUs from "./CallUs/CallUs";
+import CategoryItem from "./CategoryItem/CategoryItem";
+import ChefRecommends from "./ChefRecommends/ChefRecommends";
+import Features from "./Features/Features";
+import PopularMenu from "./PopularMenu/PopularMenu";
+import Testimonial from "./Testimonial/Testimonial";
 
 const Home = () => {
-    return (
-        <div>
-            <Banner/>
-            <CategoryItem/>
-            <PopularMenu></PopularMenu>
-            <CallUs></CallUs>
-            <ChefRecommends></ChefRecommends>
-            <Features></Features>
-            <Testimonial></Testimonial>
-        </div>
-    );
+  return (
+    <div>
+      <Helmet>
+        <title>Kacchi bhai | Home</title>
+      </Helmet>
+      <Banner />
+      <CategoryItem />
+      <PopularMenu></PopularMenu>
+      <CallUs></CallUs>
+      <ChefRecommends></ChefRecommends>
+      <Features></Features>
+      <Testimonial></Testimonial>
+    </div>
+  );
 };
 
 export default Home;
