@@ -12,8 +12,8 @@ const PopularMenu = () => {
       });
   }, []);
   return (
-    <div className="px-20">
-      <div className="text-cemter mt-5 mx-auto max-w-xl">
+    <div className="mx-auto max-w-screen-xl px-4">
+      <div className="text-cemter mt-5 ">
         <SectionHeader
           subHeading={"---Check it out---"}
           mainHeading={"FROM OUR MENU"}
