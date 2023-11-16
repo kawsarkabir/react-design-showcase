@@ -7,14 +7,15 @@ import "swiper/css/pagination";
 
 // import required modules
 import { Pagination } from "swiper/modules";
+import SectionHeader from "../Shared/SectionHeader/SectionHeader";
 const CategoryItem = () => {
   return (
     <div className="max-w-xl mx-auto">
-      <div className="text-center">
-        <p className="text-[#D99904] mt-4">---From 11:00am to 10:00pm---</p>
-        <h1 className="border-t border-b text-4xl mb-5 py-3 mt-2">
-          ORDER ONLINE
-        </h1>
+      <div className="text-center mt-6">
+        <SectionHeader
+          subHeading={"---From 11:00am to 10:00pm---"}
+          mainHeading={"ORDER ONLINE"}
+        ></SectionHeader>
       </div>
 
       <Swiper

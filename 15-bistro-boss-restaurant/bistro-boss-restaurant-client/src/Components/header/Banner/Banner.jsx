@@ -5,13 +5,13 @@ const Banner = () => {
   return (
     <div>
       <Carousel>
-        <div className="h-[90vh]">
+        <div className="h-[80vh]">
           <img src="https://i.ibb.co/y6gwkyW/banner.jpg" />
         </div>
-        <div className="h-[90vh]">
+        <div className="h-[80vh]">
           <img src="https://i.ibb.co/y6gwkyW/banner.jpg" />
         </div>
-        <div className="h-[90vh]">
+        <div className="h-[80vh]">
           <img src="https://i.ibb.co/y6gwkyW/banner.jpg" />
         </div>
       </Carousel>
