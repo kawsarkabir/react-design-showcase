@@ -1,7 +1,6 @@
 import PropTypes from "prop-types"; // ES6
 
 const MenuItem = ({ item }) => {
-  console.log(item);
   const { name, recipe, image, price } = item || {};
   return (
     <div>
