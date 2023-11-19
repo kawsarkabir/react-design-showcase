@@ -10,7 +10,7 @@ const Navbar = () => {
             isPending ? "pending" : isActive ? "text-[#DB6A00] " : ""
           }
         >
-          HOME{" "}
+          HOME
         </NavLink>
       </li>
       <li>
