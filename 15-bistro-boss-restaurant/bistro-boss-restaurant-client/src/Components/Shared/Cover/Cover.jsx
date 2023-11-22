@@ -1,12 +1,18 @@
+import { Parallax } from 'react-parallax';
+
 const Cover = ({ img, title, peragraph }) => {
   return (
-    <div>
-      <div>
+  
+      <Parallax
+        blur={{ min: -15, max: 15 }}
+        bgImage={ img}
+        bgImageAlt="the dog"
+        strength={-200}
+    >
+        
         <div
-          className="hero h-[70vh]"
-          style={{
-            backgroundImage: `${img}`,
-          }}
+          className="hero h-[80vh]"
+          
         >
           <div className="hero-overlay bg-opacity-60"></div>
           <div className="hero-content text-center text-neutral-content">
@@ -18,8 +24,11 @@ const Cover = ({ img, title, peragraph }) => {
             </div>
           </div>
         </div>
-      </div>
-    </div>
+    </Parallax>
+  
+       
+    
+ 
   );
 };
 
