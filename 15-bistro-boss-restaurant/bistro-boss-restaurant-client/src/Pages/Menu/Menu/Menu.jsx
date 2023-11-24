@@ -22,12 +22,57 @@ const Menu = () => {
         title="Our Menu"
         peragraph="Would you like to try a dish?"
       ></Cover>
-      <div  className="max-w-screen-xl mx-auto px-4">
+      {/* dessert items here */}
+      <div className="max-w-screen-xl mx-auto px-4">
         <SectionHeader
           subHeading="---Don't miss---"
           mainHeading="TODAY'S OFFER"
         ></SectionHeader>
-      <MenuCategory items={dessert}></MenuCategory>
+        <MenuCategory items={offered}></MenuCategory>
+      </div>
+      {/* dessert items here */}
+      <div className="my-10">
+        <Cover
+          img="https://i.ibb.co/9991Tjh/dessert-bg.jpg"
+          title="DESSERTS"
+          peragraph="Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+        ></Cover>
+        <div className="max-w-screen-xl mx-auto px-4">
+          <MenuCategory items={dessert}></MenuCategory>
+        </div>
+      </div>
+      {/* pizza items here */}
+      <div className="my-10">
+        <Cover
+          img="https://i.ibb.co/Hz0fqt0/pizza-bg.jpg"
+          title="PIZZA"
+          peragraph="Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+        ></Cover>
+        <div className="max-w-screen-xl mx-auto px-4">
+          <MenuCategory items={pizza}></MenuCategory>
+        </div>
+      </div>
+      {/* salad iems hre */}
+      <div className="my-10">
+        <Cover
+          img="https://i.ibb.co/Hz0fqt0/pizza-bg.jpg"
+          title="SALAD"
+          peragraph="Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+        ></Cover>
+        <div className="max-w-screen-xl mx-auto px-4">
+          <MenuCategory items={salad}></MenuCategory>
+        </div>
+      </div>
+      {/* soup items hree */}
+      <div className="my-10">
+        <Cover
+          img="https://i.ibb.co/Hz0fqt0/pizza-bg.jpg"
+          title="SOUPS"
+          peragraph="Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+        ></Cover>
+        <div className="max-w-screen-xl mx-auto px-4">
+          <MenuCategory items={soup}></MenuCategory>
+        </div>
       </div>
     </div>
   );
