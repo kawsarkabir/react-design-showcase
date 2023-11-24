@@ -1,4 +1,4 @@
-import Cover from "../../../Components/Shared/Cover/Cover";
+import { Link } from "react-router-dom";
 import MenuItem from "../../Home/PopularMenu/MenuItem";
 import PropTypes from "prop-types";
 const MenuCategory = ({ items }) => {
@@ -10,7 +10,9 @@ const MenuCategory = ({ items }) => {
         ))}
       </div>
       <div className="text-center mt-10">
-        <button className="btn btn-outline">View More</button>
+        <Link to='/order'>
+          <button className="btn btn-outline">ORDER YOUR FAVOURITE FOOD</button>
+        </Link>
       </div>
     </div>
   );
