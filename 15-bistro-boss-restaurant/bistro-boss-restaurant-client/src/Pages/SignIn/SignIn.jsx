@@ -9,9 +9,9 @@ import { useContext, useEffect, useRef, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 
 const SignIn = () => {
-  const {createUser} = useContext(AuthContext)
+  const { signInUser } = useContext(AuthContext);
   const captchaRef = useRef(null);
-  const [disabled, setdisabled] = useState(true)
+  const [disabled, setdisabled] = useState(true);
 
   useEffect(() => {
     loadCaptchaEnginge(6);
@@ -22,18 +22,25 @@ const SignIn = () => {
     const form = e.target;
     const email = form.email.value;
     const password = form.password.value;
-   console.log(email, password);
-   createUser()
+    console.log(email, password);
+    signInUser(email, password)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
   };
   const handleValidatonCaptcha = (e) => {
     e.preventDefault();
     const value = captchaRef.current.value;
-    if(validateCaptcha(value)=== true){
-      alert('captcha matched')
-      setdisabled(false)
-    }else{
-      alert('no captcha matched')
-      setdisabled(true)
+    if (validateCaptcha(value) === true) {
+      alert("captcha matched");
+      setdisabled(false);
+    } else {
+      alert("no captcha matched");
+      setdisabled(true);
     }
   };
 
@@ -124,7 +131,9 @@ const SignIn = () => {
             <span className="span">Forgot password?</span>
           </div>
 
-          <button disabled={disabled} className="button-submit">Sign In</button>
+          <button disabled={disabled} className="button-submit">
+            Sign In
+          </button>
           <p className="p">
             Donot have an account?{" "}
             <Link to={"/signup"}>

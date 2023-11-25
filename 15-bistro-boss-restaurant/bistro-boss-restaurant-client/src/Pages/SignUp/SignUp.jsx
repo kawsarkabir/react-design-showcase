@@ -1,9 +1,32 @@
+// import { useContext } from "react";
 import { Link } from "react-router-dom";
+// import { AuthContext } from "../../Provider/AuthProvider";
+import { useForm } from "react-hook-form";
 
 const SignUp = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  const onSubmit = (data) => {
+    console.log(data);
+  };
+
+  // const { createUser } = useContext(AuthContext);
+  //   createUser(email, password)
+  //     .then((result) => {
+  //       const user = result.user;
+  //       console.log(user);
+  //     })
+  //     .catch((error) => {
+  //       console.log(error.message);
+  //     });
+
   return (
     <div className="my-14 flex justify-center items-center">
-      <form className="form">
+      <form onSubmit={handleSubmit(onSubmit)} className="form">
         <h1 className="text-center font-semibold text-3xl">Sign up now !</h1>
         <div className="flex-column">
           <label>Name </label>
@@ -20,12 +43,16 @@ const SignUp = () => {
             </g>
           </svg>
           <input
+            {...register("name", { required: true })}
             name="name"
             placeholder="Enter your Name"
             className="input"
             type="text"
           />
         </div>
+        {errors.name && (
+          <span className="text-red-500">This field is required</span>
+        )}
         <div className="flex-column">
           <label>Email </label>
         </div>
@@ -41,12 +68,16 @@ const SignUp = () => {
             </g>
           </svg>
           <input
+            {...register("email", { required: true })}
             name="email"
             placeholder="Enter your Email"
             className="input"
             type="email"
           />
         </div>
+        {errors.email && (
+          <span className="text-red-500">This field is required</span>
+        )}
         <div className="flex-column">
           <label>Photo URL </label>
         </div>
@@ -62,12 +93,16 @@ const SignUp = () => {
             </g>
           </svg>
           <input
+            {...register("photoURL", { required: true })}
             name="photoURL"
             placeholder="Enter your PhotoURL"
             className="input"
             type="text"
           />
         </div>
+        {errors.photoURL && (
+          <span className="text-red-500">This field is required</span>
+        )}
         <div className="flex-column">
           <label>Password </label>
         </div>
@@ -82,12 +117,23 @@ const SignUp = () => {
             <path d="m304 224c-8.832031 0-16-7.167969-16-16v-80c0-52.929688-43.070312-96-96-96s-96 43.070312-96 96v80c0 8.832031-7.167969 16-16 16s-16-7.167969-16-16v-80c0-70.59375 57.40625-128 128-128s128 57.40625 128 128v80c0 8.832031-7.167969 16-16 16zm0 0" />
           </svg>
           <input
+            {...register("password", {
+              required: true,
+              minLength: 6,
+              maxLength: 20,
+            })}
             name="password"
             placeholder="Enter your Password"
             className="input"
             type="password"
           />
         </div>
+        {errors.password?.type === "required" && (
+          <span className="text-red-500">Password is required</span>
+        )}
+        {errors.password?.type === "minLength" && (
+          <span className="text-red-500">Password must be 6 charecter</span>
+        )}
         <div className="flex-row">
           <div>
             <input type="checkbox" name="checkbox" id="checkbox" />
@@ -99,7 +145,7 @@ const SignUp = () => {
         </div>
         <button className="button-submit">Sign Up</button>
         <p className="p">
-          Don't have an account ?
+          Donot have an account ?
           <Link to={"/signin"}>
             <span className="span">Sign Up</span>
           </Link>
