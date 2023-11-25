@@ -25,7 +25,7 @@ const Navbar = () => {
       </li>
       <li>
         <NavLink
-          to="/order"
+          to="/order/drinks"
           className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "text-[#DB6A00] " : ""
           }
