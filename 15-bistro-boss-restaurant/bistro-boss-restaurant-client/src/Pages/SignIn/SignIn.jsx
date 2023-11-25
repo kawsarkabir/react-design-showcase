@@ -1,10 +1,46 @@
+import {
+  loadCaptchaEnginge,
+  LoadCanvasTemplate,
+  validateCaptcha,
+} from "react-simple-captcha";
 import { Link } from "react-router-dom";
 import "./SignIn.css";
+import { useContext, useEffect, useRef, useState } from "react";
+import { AuthContext } from "../../Provider/AuthProvider";
+
 const SignIn = () => {
+  const {createUser} = useContext(AuthContext)
+  const captchaRef = useRef(null);
+  const [disabled, setdisabled] = useState(true)
+
+  useEffect(() => {
+    loadCaptchaEnginge(6);
+  }, []);
+
+  const handleSignIn = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const email = form.email.value;
+    const password = form.password.value;
+   console.log(email, password);
+   createUser()
+  };
+  const handleValidatonCaptcha = (e) => {
+    e.preventDefault();
+    const value = captchaRef.current.value;
+    if(validateCaptcha(value)=== true){
+      alert('captcha matched')
+      setdisabled(false)
+    }else{
+      alert('no captcha matched')
+      setdisabled(true)
+    }
+  };
+
   return (
     <div className="mx-auto max-w-screen-xl my-20">
       <div className="flex justify-center items-center">
-        <form className="form">
+        <form onSubmit={handleSignIn} className="form">
           <h1 className="text-center font-semibold text-3xl">Sign in now !</h1>
           <div className="flex-column">
             <label>Email </label>
@@ -21,10 +57,10 @@ const SignIn = () => {
               </g>
             </svg>
             <input
-              name="name"
+              name="email"
               placeholder="Enter your Email"
               className="input"
-              type="text"
+              type="email"
             />
           </div>
           <div className="flex-column">
@@ -47,6 +83,37 @@ const SignIn = () => {
               type="password"
             />
           </div>
+          {/* rechapcha is here code  */}
+          <div className="flex-column">
+            <LoadCanvasTemplate />
+          </div>
+          <div className="inputForm">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width={20}
+              viewBox="-64 0 512 512"
+              height={20}
+            >
+              <path d="m336 512h-288c-26.453125 0-48-21.523438-48-48v-224c0-26.476562 21.546875-48 48-48h288c26.453125 0 48 21.523438 48 48v224c0 26.476562-21.546875 48-48 48zm-288-288c-8.8125 0-16 7.167969-16 16v224c0 8.832031 7.1875 16 16 16h288c8.8125 0 16-7.167969 16-16v-224c0-8.832031-7.1875-16-16-16zm0 0" />
+              <path d="m304 224c-8.832031 0-16-7.167969-16-16v-80c0-52.929688-43.070312-96-96-96s-96 43.070312-96 96v80c0 8.832031-7.167969 16-16 16s-16-7.167969-16-16v-80c0-70.59375 57.40625-128 128-128s128 57.40625 128 128v80c0 8.832031-7.167969 16-16 16zm0 0" />
+            </svg>
+            <input
+              ref={captchaRef}
+              name="captcha"
+              placeholder="Type text above"
+              className="input"
+              type="text"
+            />
+          </div>
+          <div className="text-center">
+            {/* validation button here  */}
+            <button
+              onClick={handleValidatonCaptcha}
+              className="btn btn-outline"
+            >
+              validations your captcha
+            </button>
+          </div>
           <div className="flex-row">
             <div>
               <input type="checkbox" name="checkbox" id="checkbox" />
@@ -56,9 +123,10 @@ const SignIn = () => {
             </div>
             <span className="span">Forgot password?</span>
           </div>
-          <button className="button-submit">Sign In</button>
+
+          <button disabled={disabled} className="button-submit">Sign In</button>
           <p className="p">
-            Don't have an account?{" "}
+            Donot have an account?{" "}
             <Link to={"/signup"}>
               <span className="span">Sign Up</span>
             </Link>

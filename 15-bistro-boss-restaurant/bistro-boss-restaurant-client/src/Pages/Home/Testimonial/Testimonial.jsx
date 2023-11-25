@@ -14,7 +14,7 @@ const Testimonial = () => {
   const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
-    fetch("reviews.json")
+    fetch("http://localhost:5000/reviews")
       .then((res) => res.json())
       .then((data) => {
         setReviews(data);
@@ -33,7 +33,7 @@ const Testimonial = () => {
           {reviews?.map((review) => (
             <SwiperSlide key={review._id}>
               <div className="text-center mt-10 flex flex-col items-center space-y-2 w-2/3 mx-auto ">
-                <Rating  
+                <Rating
                   style={{ maxWidth: 180 }}
                   value={review?.rating}
                   readOnly
