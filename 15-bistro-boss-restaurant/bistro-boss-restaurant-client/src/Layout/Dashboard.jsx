@@ -2,16 +2,16 @@ import { NavLink, Outlet } from "react-router-dom";
 
 const Dashboard = () => {
   return (
-    <div className="flex p-5 ">
+    <div className="flex p-2">
       {/* dashboard sidebar */}
-      <div className="w-64 min-h-full bg-orange-400 rounded-l-2xl p-10">
+      <div className="w-64 min-h-screen bg-orange-400 rounded-l-2xl p-10">
         <ul>
           <li className="my-5">
             <NavLink
-              className="bg-black p-2 px-8 rounded-lg text-orange-500 "
+              className="bg-black p-2 px-7 rounded-lg text-orange-500 "
               to="/dashboard/userHome"
             >
-              User Home
+              <i className="fa-solid fa-house"></i> User Home
             </NavLink>
           </li>
           <li className="my-5">
@@ -19,23 +19,23 @@ const Dashboard = () => {
               className="bg-black py-2 px-6 rounded-lg text-orange-500 "
               to="/dashboard/reservation"
             >
-              Reservations
-            </NavLink>
-          </li>
-          <li className="my-5">
-            <NavLink
-              className="bg-black py-2 px-11 rounded-lg text-orange-500 "
-              to="/dashboard/cart"
-            >
-              My Cart
+              <i className="fa-solid fa-calendar"></i> Reservations
             </NavLink>
           </li>
           <li className="my-5">
             <NavLink
               className="bg-black py-2 px-10 rounded-lg text-orange-500 "
+              to="/dashboard/cart"
+            >
+              <i className="fa-solid fa-cart-shopping"></i> My Cart
+            </NavLink>
+          </li>
+          <li className="my-5">
+            <NavLink
+              className="bg-black py-2 px-6 rounded-lg text-orange-500 "
               to="/dashboard/review"
             >
-              Reviews
+              <i className="fa-solid fa-rectangle-ad"></i> Add Reviews
             </NavLink>
           </li>
           <li className="my-5">
@@ -43,15 +43,40 @@ const Dashboard = () => {
               className="bg-black py-2 px-7 rounded-lg text-orange-500 "
               to="/dashboard/myBooking"
             >
-              My Booking
+              <i className="fa-solid fa-list"></i> My Booking
             </NavLink>
           </li>
           <li className="my-5">
             <NavLink
-              className="bg-black py-2 px-3 rounded-lg text-orange-500 "
+              className="bg-black py-2 px-2 rounded-lg text-orange-500 "
               to="/dashboard/paymentHistory"
             >
-              Payment History
+              <i className="fa-solid fa-credit-card"></i> Payment History
+            </NavLink>
+          </li>
+          <div className="divider"></div>
+          <li className="my-5">
+            <NavLink
+              className="bg-black py-2 px-12 rounded-lg text-orange-500 "
+              to="/"
+            >
+              <i className="fa-solid fa-house"></i> Home
+            </NavLink>
+          </li>
+          <li className="my-5">
+            <NavLink
+              className="bg-black py-2 px-12 rounded-lg text-orange-500 "
+              to="/menu"
+            >
+              <i className="fa-solid fa-list"></i> Menu
+            </NavLink>
+          </li>
+          <li className="my-5">
+            <NavLink
+              className="bg-black py-2 px-12 rounded-lg text-orange-500 "
+              to="/order/salad"
+            >
+              <i className="fa-solid fa-pen-to-square"></i> Order
             </NavLink>
           </li>
         </ul>
