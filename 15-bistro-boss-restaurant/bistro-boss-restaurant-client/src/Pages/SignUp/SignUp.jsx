@@ -1,31 +1,39 @@
 // import { useContext } from "react";
-import { Link } from "react-router-dom";
-// import { AuthContext } from "../../Provider/AuthProvider";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../Provider/AuthProvider";
 import { useForm } from "react-hook-form";
+import { Helmet } from "react-helmet-async";
+import { useContext } from "react";
 
 const SignUp = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
+  const { createUser, profileUpdate } = useContext(AuthContext);
 
   const onSubmit = (data) => {
     console.log(data);
+    createUser(data.email, data.password)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+        profileUpdate(data.name, data.photoURL)
+        navigate(location?.state ? location.state : "/");
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
   };
-
-  // const { createUser } = useContext(AuthContext);
-  //   createUser(email, password)
-  //     .then((result) => {
-  //       const user = result.user;
-  //       console.log(user);
-  //     })
-  //     .catch((error) => {
-  //       console.log(error.message);
-  //     });
 
   return (
     <div className="my-14 flex justify-center items-center">
+      <Helmet>
+        <title>Kacchi bhai | Sign Up</title>
+      </Helmet>
       <form onSubmit={handleSubmit(onSubmit)} className="form">
         <h1 className="text-center font-semibold text-3xl">Sign up now !</h1>
         <div className="flex-column">
@@ -119,8 +127,10 @@ const SignUp = () => {
           <input
             {...register("password", {
               required: true,
-              minLength: 6,
+
               maxLength: 20,
+              pattern:
+                /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]).{6,}$/,
             })}
             name="password"
             placeholder="Enter your Password"
@@ -133,6 +143,13 @@ const SignUp = () => {
         )}
         {errors.password?.type === "minLength" && (
           <span className="text-red-500">Password must be 6 charecter</span>
+        )}
+        {errors.password?.type === "pattern" && (
+          <span className="text-red-500">
+            password shoud be at least 6 characters, at least one uppercase
+            letter, one lowercase letter, and one number and one spicial
+            charecter
+          </span>
         )}
         <div className="flex-row">
           <div>
