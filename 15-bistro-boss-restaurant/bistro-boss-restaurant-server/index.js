@@ -48,7 +48,9 @@ async function run() {
 
     // get cart items
     app.get("/carts", async (req, res) => {
-      res.send(await cartCollections.find().toArray());
+      const email = req.query.email;
+      const query = {email: email}
+      res.send(await cartCollections.find(query).toArray());
     });
 
     // Send a ping to confirm a successful connection
