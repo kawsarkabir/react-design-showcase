@@ -6,7 +6,7 @@ import useCart from "../../../hooks/useCart";
 const Navbar = () => {
   const { logOut, user } = useContext(AuthContext);
   const [cart] = useCart();
-  console.log(cart);
+  const totalPrice = cart.reduce((total, item) => total + item.price, 0);
 
   const handleLogout = () => {
     logOut()
@@ -75,9 +75,14 @@ const Navbar = () => {
             >
               <div className="card-body">
                 <span className="font-bold text-lg">{cart?.length} Items</span>
-                <span className="text-info">Subtotal: $999</span>
+                <span className="text-info text-lg">Subtotal: {totalPrice}</span>
                 <div className="card-actions">
-                  <Link to="/dashboard/cart" className="btn btn-primary btn-block">View cart</Link>
+                  <Link
+                    to="/dashboard/cart"
+                    className="btn btn-primary btn-block"
+                  >
+                    View cart
+                  </Link>
                 </div>
               </div>
             </div>
