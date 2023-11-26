@@ -1,16 +1,19 @@
 import PropTypes from "prop-types"; // ES6
 import useAuth from "../../../hooks/useAuth";
 import Swal from "sweetalert2";
-import { axiosSecure } from "../../../hooks/useAxiosSecure";
+import useAxiosSecure from "../../../hooks/useAxiosSecure";
+import useCart from "../../../hooks/useCart";
 
 const FoodCard = ({ item }) => {
   const { name, recipe, image, price, _id } = item || {};
   const { user } = useAuth();
+  const axiosSecure = useAxiosSecure();
+  const [, refetch] = useCart();
+  // console.log(refetch);
 
-  const handleAddToCart = (food) => {
-    console.log(food, user.email);
+  const handleAddToCart = () => {
     if (user && user.email) {
-      // if user current got to databse
+      // if user current go to databse
       const cartItems = {
         menuId: _id,
         email: user.email,
@@ -18,20 +21,23 @@ const FoodCard = ({ item }) => {
         image,
         price,
       };
-      axiosSecure.post('/carts', cartItems)
-      .then(data=>{
-        console.log(data.data);
-        if(data.data.insertedId){
-          Swal.fire({
-            title: "Good job!",
-            text: `${name} Added to Your Cart!`,
-            icon: "success"
-          });
-        }
-      })
-      .catch(err=>{
-        console.log(err);
-      })
+      axiosSecure
+        .post("/carts", cartItems)
+        .then((data) => {
+          console.log(data.data);
+          if (data.data.insertedId) {
+            Swal.fire({
+              title: "Good job!",
+              text: `${name} Added to Your Cart!`,
+              icon: "success",
+            });
+            // refretch the cart
+            refetch();
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+        });
     } else {
       Swal.fire({
         title: "You Are Not Login!",
