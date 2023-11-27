@@ -31,20 +31,28 @@ async function run() {
     const reviewCollections = client.db("bistroDB").collection("reviews");
     const cartCollections = client.db("bistroDB").collection("carts");
 
-
-    // user api 
-    app.post('/users', async(req, res)=>{
-      const user = req.body
-      const query = {email: user.email}
-      const isExitUser = await userCollections.findOne(query)
-      if(isExitUser){
-        return res.send({message: 'user already exit',inserted: null})
+    // user api
+    app.post("/users", async (req, res) => {
+      const user = req.body;
+      const query = { email: user.email };
+      const isExitUser = await userCollections.findOne(query);
+      if (isExitUser) {
+        return res.send({ message: "user already exit", inserted: null });
       }
-      res.send(await userCollections.insertOne(user))
+      res.send(await userCollections.insertOne(user));
     });
 
+    // user get api
+    app.get("/users", async (req, res) => {
+      res.send(await userCollections.find().toArray());
+    });
 
-
+    // delete users
+    app.delete("/users/:id", async (req, res) => {
+      const id = req.params.id;
+      const query = { _id: new ObjectId(id) };
+      res.send(await userCollections.deleteOne(query));
+    });
 
     // get menu data
     app.get("/menu", async (req, res) => {
