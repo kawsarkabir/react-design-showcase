@@ -2,6 +2,7 @@ const express = require("express");
 require("dotenv").config();
 const app = express();
 const cors = require("cors");
+const jwt = require("jsonwebtoken");
 const port = process.env.PORT || 5000;
 
 // midleware
@@ -31,6 +32,15 @@ async function run() {
     const reviewCollections = client.db("bistroDB").collection("reviews");
     const cartCollections = client.db("bistroDB").collection("carts");
 
+    // jwt ttoken generate
+    app.post("/jwt", async (req, res) => {
+      const user = req.body;
+      const token = jwt.sign(user, process.env.ACCESS_TOKEN, {
+        expiresIn: "1h",
+      });
+      res.send({ token });
+    });
+
     // user api
     app.post("/users", async (req, res) => {
       const user = req.body;
@@ -42,9 +52,37 @@ async function run() {
       res.send(await userCollections.insertOne(user));
     });
 
+    // varify token midleware
+    const varifyToken = (req, res, next) => {
+      console.log('inside varify token', req.headers.authorization);
+      if (!req.headers.authorization) {
+        return res.status(401).send({ message: "forbidded access" });
+      }
+      const token = req.headers.authorization.split(" ")[1];
+      jwt.verify(token, process.env.ACCESS_TOKEN, (err, decoded) => {
+        if (err) {
+          return res.status(401).send({ message: "unauthorized access" });
+        }
+        req.decoded = decoded;
+        next();
+      });
+    };
+
     // user get api
-    app.get("/users", async (req, res) => {
+    app.get("/users", varifyToken, async (req, res) => {
       res.send(await userCollections.find().toArray());
+    });
+
+    // update users
+    app.patch("/users/admin/:id", async (req, res) => {
+      const id = req.params.id;
+      const filter = { _id: new ObjectId(id) };
+      const updatedDoc = {
+        $set: {
+          role: "admin",
+        },
+      };
+      res.send(await userCollections.updateOne(filter, updatedDoc));
     });
 
     // delete users
