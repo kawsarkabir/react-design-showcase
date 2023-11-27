@@ -85,7 +85,7 @@ const Cart = () => {
                     </div>
                   </td>
                   <td>{singleCart?.price}</td>
-                  <td className="">
+                  <td>
                     <button
                       onClick={() => handleDelete(singleCart._id)}
                       className="btn  bg-red-500 text-white text-2xl px-2 py-1 btn-outline"
