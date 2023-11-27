@@ -8,10 +8,28 @@ const AllUser = () => {
   const { refetch, data: users = [] } = useQuery({
     queryKey: ["users"],
     queryFn: async () => {
-      const res = await axiosSecure.get("/users");
+      const res = await axiosSecure.get("/users", {
+        headers : {
+            Authorization: `Bearer ${localStorage.getItem('access-token')}`
+        }
+      });
       return res.data;
     },
   });
+
+  const handleMakeUser = (user) => {
+    axiosSecure.patch(`/users/admin/${user?._id}`).then((res) => {
+      if (res.data.modifiedCount > 0) {
+        Swal.fire({
+          title: "Admin Update!",
+          text: `${user?.name} is now an Admin !`,
+          icon: "success",
+        });
+        refetch();
+      }
+    });
+  };
+
   const handleDelete = (id) => {
     Swal.fire({
       title: "Are you sure?",
@@ -82,7 +100,16 @@ const AllUser = () => {
                     </div>
                   </td>
                   <td>
-                    <i className="fa-solid fa-users"></i>
+                    {user.role === "admin" ? (
+                      <span className="text-blue-500">Admin</span>
+                    ) : (
+                      <button
+                        onClick={() => handleMakeUser(user)}
+                        className="btn  bg-red-500 text-white btn-sm btn-outline"
+                      >
+                         <span>make admin</span>
+                      </button>
+                    )}
                   </td>
                   <td>
                     <button
