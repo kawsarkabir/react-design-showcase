@@ -24,7 +24,15 @@ const Dashboard = () => {
                 >
                   <i className="fa-solid fa-calendar"></i> Add Items
                 </NavLink>
-              </li>              
+              </li>    
+              <li className="my-5">
+                <NavLink
+                  className="bg-black py-2 px-5 rounded-lg text-orange-500 "
+                  to="/dashboard/managesItem"
+                >
+                  <i className="fa-solid fa-calendar"></i> Manages Item
+                </NavLink>
+              </li>           
               <li className="my-5">
                 <NavLink
                   className="bg-black py-2 px-1 rounded-lg text-orange-500 "
@@ -36,7 +44,7 @@ const Dashboard = () => {
               <li className="my-5">
                 <NavLink
                   className="bg-black py-2 px-11 rounded-lg text-orange-500 "
-                  to="/dashboard/allUser"
+                  to="/dashboard/users"
                 >
                   <i className="fa-solid fa-credit-card"></i> all User
                 </NavLink>
