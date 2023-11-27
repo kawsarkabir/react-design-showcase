@@ -10,7 +10,7 @@ app.use(express.json());
 
 // mongoDB connect
 
-const { MongoClient, ServerApiVersion } = require("mongodb");
+const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.hvlfmu8.mongodb.net/?retryWrites=true&w=majority`;
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
@@ -26,9 +26,25 @@ async function run() {
   try {
     // Connect the client to the server	(optional starting in v4.7)
     await client.connect();
+    const userCollections = client.db("bistroDB").collection("users");
     const menuCollections = client.db("bistroDB").collection("menu");
     const reviewCollections = client.db("bistroDB").collection("reviews");
     const cartCollections = client.db("bistroDB").collection("carts");
+
+
+    // user api 
+    app.post('/users', async(req, res)=>{
+      const user = req.body
+      const query = {email: user.email}
+      const isExitUser = await userCollections.findOne(query)
+      if(isExitUser){
+        return res.send({message: 'user already exit',inserted: null})
+      }
+      res.send(await userCollections.insertOne(user))
+    });
+
+
+
 
     // get menu data
     app.get("/menu", async (req, res) => {
@@ -49,8 +65,15 @@ async function run() {
     // get cart items
     app.get("/carts", async (req, res) => {
       const email = req.query.email;
-      const query = {email: email}
+      const query = { email: email };
       res.send(await cartCollections.find(query).toArray());
+    });
+
+    // delete carts
+    app.delete("/carts/:id", async (req, res) => {
+      const id = req.params.id;
+      const query = { _id: new ObjectId(id) };
+      res.send(await cartCollections.deleteOne(query));
     });
 
     // Send a ping to confirm a successful connection
