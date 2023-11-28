@@ -8,11 +8,7 @@ const AllUser = () => {
   const { refetch, data: users = [] } = useQuery({
     queryKey: ["users"],
     queryFn: async () => {
-      const res = await axiosSecure.get("/users", {
-        headers : {
-            Authorization: `Bearer ${localStorage.getItem('access-token')}`
-        }
-      });
+      const res = await axiosSecure.get("/users");
       return res.data;
     },
   });
@@ -107,7 +103,7 @@ const AllUser = () => {
                         onClick={() => handleMakeUser(user)}
                         className="btn  bg-red-500 text-white btn-sm btn-outline"
                       >
-                         <span>make admin</span>
+                        <span>make admin</span>
                       </button>
                     )}
                   </td>
