@@ -6,7 +6,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-    <img src="image/react-design-showcase-banner.png" alt="react-design-showcase-banner-repo" height="280">
+    <img src="image/react-design-showcase-banner.png" alt="react-design-showcase-banner-repo">
 </p>
 
 <h3 align="center">React Design ShowCase</h3>
@@ -15,9 +15,7 @@
 </p>
 
 <!-- Insructions -->
-
 ## Instructions
-General instructions on how to clone the entire repository and run any of the projects locally.
 
 ```bash
 # Clone the repository
