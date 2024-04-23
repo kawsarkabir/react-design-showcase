@@ -34,10 +34,4 @@ Hi, I'm Kawsar Kabir, a frontend developer passionate about creating engaging an
 
 Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/kawsarkabir/) to discuss frontend development, design, or anything related to the exciting world of web development!
 
-## Contributing
-
-If you'd like to contribute to this project, please follow the [contributing guidelines](CONTRIBUTING.md).
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
+ 
