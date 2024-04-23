@@ -6,7 +6,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="image/react-design-showcase-banner.png" alt="react-design-showcase-banner-repo" height="280">
 </p>
 
 <h3 align="center">React Design ShowCase</h3>
@@ -16,8 +16,7 @@
 
 <!-- Insructions -->
 
-### Instructions
-
+## Instructions
 General instructions on how to clone the entire repository and run any of the projects locally.
 
 ```bash
@@ -27,14 +26,13 @@ git clone https://github.com/kawsarkabir/react-design-showcase.git
 # Navigate to the project folder
 cd react-design-showcase
 
-# Run a specific project (replace 'project-name' with the actual folder name like 01-guns-shop)
+# Run a specific project (replace 'project-name' with the actual folder name)
 cd project-name
 npm i
 npm run dev
 ```
 
-### About Me
-
+## About Me
 A passionate web developer with a strong skill set in JavaScript, React.js, Redux, TypeScript, NexjJS. I&lsquo;m dedicated to crafting visually stunning and highly responsive websites with a keen eye for details and a commitment to clean, efficient code, I specialize in creating web experiences that leave a lasting impression.
 
 Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/kawsarkabir/) to discuss frontend development, design, or anything related to the exciting world of web development!
