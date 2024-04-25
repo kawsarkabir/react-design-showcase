@@ -1,7 +1,7 @@
 export default function Header(){
     return (
          <>
-             <h1>Knowledge Cafe</h1>
+             <h1 className="text-3xl">Knowledge Cafe</h1>
          </>
     );
 }

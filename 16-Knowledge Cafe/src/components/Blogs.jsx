@@ -1,18 +1,9 @@
-import { useEffect } from "react";
-import { useState } from "react";
-
-export default function Blogs() {
-  const [blogs, setBlogs] = useState([]);
-  useEffect(() => {
-    fetch("blogs.json")
-      .then((res) => res.json())
-      .then((data) => setBlogs(data));
-  }, []);
+export default function Blogs({ handleBookMarks, blogs, handleMarkAsRead }) {
   return (
     <>
       {blogs?.map((blog) => (
         <div key={blog.id} className="mt-8">
-          <img src={blog?.cover} alt="" className="w-full" />
+          <img src={blog?.cover} alt="" className="w-full rounded-xl" />
           <div className="flex items-center justify-between my-4">
             <div className="flex items-center gap-x-2">
               <div>
@@ -27,7 +18,13 @@ export default function Blogs() {
                 <p>{blog?.publishDate}</p>
               </div>
             </div>
-            <div>{blog?.readingTime} read </div>
+            <div>
+              {blog?.readingTime} read{" "}
+              <i
+                onClick={() => handleBookMarks(blog)}
+                className="fa-solid fa-bookmark cursor-pointer ml-2"
+              ></i>
+            </div>
           </div>
           <h1 className="text-3xl">{blog?.blogTitle}</h1>
           <div className="flex space-x-5 mt-3">
@@ -35,7 +32,9 @@ export default function Blogs() {
               <p key={tag}>#{tag}</p>
             ))}
           </div>
-          <button>Mark as Read</button>
+          <button onClick={() => handleMarkAsRead(blog?.id, blog?.readingTime)}>
+            Mark as Read
+          </button>
         </div>
       ))}
     </>
